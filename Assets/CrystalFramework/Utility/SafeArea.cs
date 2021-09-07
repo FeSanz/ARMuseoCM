@@ -43,7 +43,6 @@ namespace Crystal
         /// Simulation mode for use in editor only. This can be edited at runtime to toggle between different safe areas.
         /// </summary>
         public static SimDevice Sim = SimDevice.None;
-        public SimDevice simInput = SimDevice.None;
 
         /// <summary>
         /// Normalised safe areas for iPhone X with Home indicator (ratios are identical to Xs, 11 Pro). Absolute values:
@@ -107,7 +106,6 @@ namespace Crystal
 
         void Awake ()
         {
-            Sim = simInput;
             Panel = GetComponent<RectTransform> ();
 
             if (Panel == null)
