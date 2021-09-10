@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -666,7 +666,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 268678220}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1277983445}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: ChangeScenebyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MicroscopioScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &268678220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,7 +971,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 397910911}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1277983445}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: ChangeScenebyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RenovablesScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &397910911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2415,7 +2439,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 806840946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1277983445}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: ChangeScenebyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: QuimicaScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &806840946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2800,7 +2836,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 873654399}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1277983445}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: ChangeScenebyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: CicloAguaScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &873654399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5424,7 +5472,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: AguaMarte
+          m_StringArgument: AguaMarteScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1527415453
@@ -5671,7 +5719,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1632951841}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1277983445}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: ChangeScenebyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: NuclearScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1632951841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7059,7 +7119,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2019295691}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1277983445}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: ChangeScenebyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MapaHidrologicoScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2019295691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7665,8 +7737,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6249965926723682820}
   m_HandleRect: {fileID: 6249965926723682843}
   m_Direction: 2
-  m_Value: 0.9999999
-  m_Size: 0.38416833
+  m_Value: 1.0000001
+  m_Size: 0.57570475
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
