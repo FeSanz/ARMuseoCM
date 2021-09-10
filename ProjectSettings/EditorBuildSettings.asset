@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/13.Relatividad/Scene/RelatividadScene.unity
     guid: 3d47abaa992c8e14a8bb4bff9cc51e05
+  - enabled: 1
+    path: Assets/3.Agua-Marte/Scenes/AguaMarte.unity
+    guid: 25d6a8db25ebcdf47958f70b50ca6f2c
   m_configObjects: {}

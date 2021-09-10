@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5390,7 +5390,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1527415453}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1277983445}
+        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+        m_MethodName: ChangeScenebyName
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: AguaMarte
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1527415453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7630,7 +7642,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6249965926723682843}
   m_Direction: 2
   m_Value: 0.9999999
-  m_Size: 0.5879806
+  m_Size: 0.38416833
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
