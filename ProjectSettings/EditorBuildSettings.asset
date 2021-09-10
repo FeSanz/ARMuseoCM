@@ -9,15 +9,39 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/1.Microscopio/Scenes/MicroscopioScene.unity
+    guid: 5c0dacf46b47f3144b7ad55fd2a94bfb
+  - enabled: 1
     path: Assets/2.Sistema-Solar/Scenes/SistemaSolarScene.unity
     guid: 88c12d3dd13bb304bb3d56edde6e9854
+  - enabled: 1
+    path: Assets/3.Agua-Marte/Scenes/AguaMarteScene.unity
+    guid: 25d6a8db25ebcdf47958f70b50ca6f2c
   - enabled: 1
     path: Assets/4.Creacion-Agua/Scenes/CreacionAguaScene.unity
     guid: f8c3a4807a96a714699db3aa24051997
   - enabled: 1
+    path: Assets/5.Mapa-Hidrologico/Scenes/MapaHidrologicoScene.unity
+    guid: 710928685a9dfeb48a1e22fe7ac64a10
+  - enabled: 1
+    path: Assets/6.Ciclo-Agua/Scenes/CicloAguaScene.unity
+    guid: e52b6f4f99bafbc4bac20ea3da338480
+  - enabled: 1
+    path: Assets/7.Estados-Agua/EstadosAguaScene.unity
+    guid: 7ab2602caabb924439543852bb751342
+  - enabled: 1
+    path: Assets/8.Energia-Nuclear/Scenes/NuclearScene.unity
+    guid: 8d606c496bc43f845952d899cfdaee01
+  - enabled: 1
+    path: Assets/9-10.Energias-Renovables/Scenes/RenovablesScene.unity
+    guid: 97f0fc08468ac544dada17b9dcc4c6bf
+  - enabled: 1
+    path: Assets/11.Energia-Sonora/EnergiaSonoraScene.unity
+    guid: e107b3e3fcbac3b4dad5c1674b88e6bf
+  - enabled: 1
+    path: Assets/12.Energia-Quimica/Scenes/QuimicaScene.unity
+    guid: fdfa2c550e4d668409222db2fc701c6e
+  - enabled: 1
     path: Assets/13.Relatividad/Scene/RelatividadScene.unity
     guid: 3d47abaa992c8e14a8bb4bff9cc51e05
-  - enabled: 1
-    path: Assets/3.Agua-Marte/Scenes/AguaMarte.unity
-    guid: 25d6a8db25ebcdf47958f70b50ca6f2c
   m_configObjects: {}
