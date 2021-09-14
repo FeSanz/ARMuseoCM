@@ -10,33 +10,25 @@ public class SolarSystemController : MonoBehaviour
     [SerializeField, Tooltip("Animacion del sistema solar")]
     private Animator animatorSolarSystem;
 
+    [SerializeField, Tooltip("Animación de la notificación")]
+    private GameObject notificación;
+
     [SerializeField, Tooltip("Lista de planetas a mostrar individualmente")]
     private GameObject[] listPlanets;
-
-    Dictionary<string, string> diccionario = new Dictionary<string, string>();
-    [SerializeField, Tooltip("Titlo del planeta")]
-    private TextMeshProUGUI textTitle;
-
-    [SerializeField, Tooltip("Descrpcion del planeta")]
-    private TextMeshProUGUI textDescription;
     
-    [SerializeField, Tooltip("Días del planeta")]
-    private TextMeshProUGUI textDay;
+    [SerializeField, Tooltip("Titulo, Descripcion, Días, Años, Temperatura, Medidas")]
+    private TextMeshProUGUI[] textData;
     
-    [SerializeField, Tooltip("Años del planeta")]
-    private TextMeshProUGUI textYear;
-
-    [SerializeField, Tooltip("Temperatura del planeta")]
-    private TextMeshProUGUI textTemperature;
-    
-    [SerializeField, Tooltip("Medidas del planeta")]
-    private TextMeshProUGUI textMeasure;
- 
     /// <summary>
     /// Se activa al seleccionar un planeta para mostrar la descripción del mismo
     /// </summary>
     /// <param name="idPlanetSelected">ID del planeta seleccionado</param>
     public void ActivePlanets(int idPlanetSelected) {
+        if (notificación.activeInHierarchy)
+        {
+            notificación.GetComponent<Animator>().Play("Out");
+            notificación.SetActive(false);
+        }
         switch (idPlanetSelected) {
             case 1:
                 PlanetSelectedData( idPlanetSelected, "MERCURIO", 
@@ -96,7 +88,6 @@ public class SolarSystemController : MonoBehaviour
                 break;
             default:
                 //ShowSolarSystem();
-                //ShowSolarSystem();
                 break;
         }
     }
@@ -114,15 +105,16 @@ public class SolarSystemController : MonoBehaviour
     private void PlanetSelectedData(int idPlanet, string name, string description, string day, string year, string temperature, string measure)
     {
         animatorSolarSystem.Play("AnimSolarSystemHide");
-        
-        textTitle.text = name;
-        textDescription.text = description;
-        textDay.text = day;
-        textYear.text = year;
-        textTemperature.text = temperature;
-        textMeasure.text = measure;
-        
         HideAllPlanets();
+        animatorSolarSystem.gameObject.SetActive(false);
+        
+        textData[0].text = name;
+        textData[1].text = description;
+        textData[2].text = day;
+        textData[3].text = year;
+        textData[4].text = temperature;
+        textData[5].text = measure;
+        
         listPlanets[idPlanet - 1].SetActive(true);
         listPlanets[idPlanet - 1].GetComponent<Animator>().SetTrigger("rotation");
     }
@@ -136,9 +128,6 @@ public class SolarSystemController : MonoBehaviour
         {
             planet.SetActive(false);
         }
-    }
-    public void HideSolarSystem() {
-        animatorSolarSystem.gameObject.SetActive(false);
     }
     public void ShowSolarSystem()
     {
