@@ -24,14 +24,10 @@ public class EllipseRender : MonoBehaviour
     
     void Start()
     {
-
         lineRenderer = transform.gameObject.AddComponent<LineRenderer>();
         lineRenderer.useWorldSpace = false;
         lineRenderer.widthMultiplier = 0.05f;
         lineRenderer.material = materialEllipse;
-
-
-
     }
 
     private void OnDisable()
@@ -50,18 +46,15 @@ public class EllipseRender : MonoBehaviour
             {
                 lineRenderer.positionCount = index+1;
                 lineRenderer.SetPosition(index, planet.transform.localPosition);
-                Debug.Log(index);
+                //Debug.Log(index);
                 
                 index++;
                 indexFrame = 0;
             }
-
             else
             {
                 indexFrame++;
             }
         }
-
-
     }
 }
