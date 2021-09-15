@@ -7,7 +7,6 @@ public class SoundsPiano : MonoBehaviour
     [SerializeField] AudioClip[] audios;
     [SerializeField] ParticleSystem waves;
     AudioSource audioSource;
-    bool reproducing = false;
     int numberAudio = 0;
 
     // Start is called before the first frame update
@@ -22,10 +21,6 @@ public class SoundsPiano : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!audioSource.isPlaying)
-        {
-            waves.Stop();
-        }
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -37,16 +32,6 @@ public class SoundsPiano : MonoBehaviour
                 {
                     waves.Play();
                     NextAudio();
-                    if (audioSource.isPlaying)
-                    {
-                        //reproducing = false;
-                        audioSource.Stop();
-                    }
-                    else
-                    {
-                        //reproducing = true;
-                        audioSource.Play();
-                    }
                 }
 
             }

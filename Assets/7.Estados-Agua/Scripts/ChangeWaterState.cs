@@ -27,7 +27,7 @@ public class ChangeWaterState : MonoBehaviour
         Gaseoso.SetActive(true);
         Contorno.transform.localPosition = new Vector2(175.3f, 0);
     }
-    public void DisableAll()
+    private void DisableAll()
     {
         Solido.SetActive(false);
         Liquido.SetActive(false);
