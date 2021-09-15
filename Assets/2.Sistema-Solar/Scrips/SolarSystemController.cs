@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using System.Linq;
 
-
 public class SolarSystemController : MonoBehaviour
 {
     [SerializeField, Tooltip("Animacion del sistema solar")]
@@ -95,7 +94,7 @@ public class SolarSystemController : MonoBehaviour
     /// <summary>
     /// Llena el panel de información de acuerdo al planeta seleccionado
     /// </summary>
-    /// <param name="idPlanet">ID del planeta seleccionado</param>
+    /// <param name="idPlanet"></param>
     /// <param name="name"></param>
     /// <param name="description"></param>
     /// <param name="day"></param>
@@ -129,6 +128,10 @@ public class SolarSystemController : MonoBehaviour
             planet.SetActive(false);
         }
     }
+    
+    /// <summary>
+    /// Muestra nuevamente sistema solar y oculta planetas grandes
+    /// </summary>
     public void ShowSolarSystem()
     {
         HideAllPlanets();

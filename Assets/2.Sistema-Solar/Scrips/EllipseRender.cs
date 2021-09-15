@@ -4,56 +4,53 @@ using UnityEngine;
 
 public class EllipseRender : MonoBehaviour
 {
-    private LineRenderer lineRenderer;
-    private List<Vector3> listPoints;
-    
     [SerializeField, Tooltip("Numero de elementos en el arreglo")]
     public int pointsCount = 150;
 
-    [SerializeField, Tooltip("PlanetToFollow")]
+    [SerializeField, Tooltip("Planeta a dibujar orbita")]
     public GameObject planet;
 
-    [SerializeField]
+    [SerializeField, Tooltip("Detalle de orbita")]
     private int detailEllipse = 10;
     
-    [SerializeField]
+    [SerializeField, Tooltip("Material de la orbita")]
     private Material materialEllipse;
 
-    private int index = 0;
-    private int indexFrame = -100;
+    private int _index = 0;
+    private int _indexFrame = -100;
+    private LineRenderer _lineRenderer;
     
     void Start()
     {
-        lineRenderer = transform.gameObject.AddComponent<LineRenderer>();
-        lineRenderer.useWorldSpace = false;
-        lineRenderer.widthMultiplier = 0.05f;
-        lineRenderer.material = materialEllipse;
+        _lineRenderer = transform.gameObject.AddComponent<LineRenderer>();
+        _lineRenderer.useWorldSpace = false;
+        _lineRenderer.widthMultiplier = 0.05f;
+        _lineRenderer.material = materialEllipse;
     }
 
     private void OnDisable()
     {
-        index = 0;
-        indexFrame = 0;
-        lineRenderer.positionCount = 0;
+        _index = 0;
+        _indexFrame = 0;
+        _lineRenderer.positionCount = 0;
     }
 
     void Update()
     {
-        if (index != pointsCount) 
+        //Dibujo linea de acuerdo a posición de planeta
+        if (_index != pointsCount) 
         {
-
-            if (detailEllipse == indexFrame)
+            if (detailEllipse == _indexFrame)
             {
-                lineRenderer.positionCount = index+1;
-                lineRenderer.SetPosition(index, planet.transform.localPosition);
-                //Debug.Log(index);
+                _lineRenderer.positionCount = _index + 1;
+                _lineRenderer.SetPosition(_index, planet.transform.localPosition);
                 
-                index++;
-                indexFrame = 0;
+                _index++;
+                _indexFrame = 0;
             }
             else
             {
-                indexFrame++;
+                _indexFrame++;
             }
         }
     }
