@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class SoundsPiano : MonoBehaviour
 {
-    [SerializeField] AudioClip[] audios;
-    [SerializeField] ParticleSystem waves;
-    AudioSource audioSource;
-    int numberAudio = 0;
-
-    // Start is called before the first frame update
+    [Tooltip("Arreglo de audios para el piano")] [SerializeField] AudioClip[] audios;
+    [Tooltip("Sistema de particulas de sonido")] [SerializeField] ParticleSystem waves;
+    private AudioSource audioSource; //Controlador de audio
+    private int numberAudio = 0; //variable para controlar el num de audios a reproducir
+    
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
-        //print(audios.Length);
         waves.Stop();
-
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -27,7 +23,6 @@ public class SoundsPiano : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                //print(hit.collider.tag);
                 if (hit.collider.tag == "piano")
                 {
                     waves.Play();
@@ -35,12 +30,11 @@ public class SoundsPiano : MonoBehaviour
                 }
 
             }
-                    //hit.collider.enabled = false;
-
-
         }
     }
-
+     /// <summary>
+     /// Método para hacer el cambio de audio, al llegar al final del areeglo re reinicia el orden
+     /// </summary>
     public void NextAudio()
     {
         audioSource.clip = audios[numberAudio];
