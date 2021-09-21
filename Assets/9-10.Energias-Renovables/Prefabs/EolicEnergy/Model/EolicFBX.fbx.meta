@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: def08a1267a1e354e933e2fe4ab72f9a
+guid: 0aacdbeef85042c44b4c326691fde157
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eolico
+    second: {fileID: 2100000, guid: 400e715d41623e14a89aa877c189c9bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: suelo
+    second: {fileID: 2100000, guid: 9b68228e4b81a2640bd75f04068401b6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
