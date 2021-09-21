@@ -39,8 +39,8 @@ EditorBuildSettings:
     path: Assets/11.Energia-Sonora/Scene/EnergiaSonoraScene.unity
     guid: e107b3e3fcbac3b4dad5c1674b88e6bf
   - enabled: 1
-    path: Assets/12.Energia-Quimica/Scenes/QuimicaScene.unity
-    guid: fdfa2c550e4d668409222db2fc701c6e
+    path: Assets/12.Energia-Quimica/Scenes/EnergiaQuimicaScene.unity
+    guid: 5b89624b9d5dd284e904d2ac7ab385b8
   - enabled: 1
     path: Assets/13.Relatividad/Scene/RelatividadScene.unity
     guid: 3d47abaa992c8e14a8bb4bff9cc51e05
