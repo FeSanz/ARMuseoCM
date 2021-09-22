@@ -6,27 +6,30 @@ public class SoundsPiano : MonoBehaviour
 {
     [Tooltip("Arreglo de audios para el piano")] [SerializeField] AudioClip[] audios;
     [Tooltip("Sistema de particulas de sonido")] [SerializeField] ParticleSystem waves;
+    public float HighDown = -0.08872f;
     private AudioSource audioSource; //Controlador de audio
     private int numberAudio = 0; //variable para controlar el num de audios a reproducir
     
     void Start()
     {
-        audioSource = gameObject.GetComponent<AudioSource>();
-        waves.Stop();
+        //audioSource = gameObject.GetComponent<AudioSource>();
+        //waves.Stop();
     }
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.tag == "piano")
+                if (hit.collider.tag == "tecla")
                 {
-                    waves.Play();
-                    NextAudio();
+                    hit.collider.transform.localPosition = hit.collider.transform.localPosition + new Vector3(0, HighDown, 0);
+                    StartCoroutine(ReturnKeyPosition(hit.collider.gameObject));
+                    //waves.Play();
+                    //NextAudio();
                 }
 
             }
@@ -43,5 +46,16 @@ public class SoundsPiano : MonoBehaviour
             numberAudio = 0;
         }else
             numberAudio++;
+    }
+
+    /// <summary>
+    /// Despues de .5 segundos regresa la tecla a su lugar
+    /// </summary>
+    private IEnumerator ReturnKeyPosition(GameObject Key)
+    {
+        // process pre-yield
+        yield return new WaitForSeconds(.20f);
+        Key.transform.localPosition = new Vector3(1.017162f, 1.52872f, 0);
+        // process post-yield
     }
 }
