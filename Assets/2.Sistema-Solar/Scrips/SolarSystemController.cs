@@ -6,23 +6,40 @@ using System.Linq;
 
 public class SolarSystemController : MonoBehaviour
 {
-    [SerializeField, Tooltip("Animacion del sistema solar")]
+    [SerializeField, Tooltip("Animación del sistema solar")]
     private Animator animatorSolarSystem;
+    
+    //[SerializeField, Tooltip("Animación del panel informativo")]
+    //private Animator animatorInfoPanel;
 
     [SerializeField, Tooltip("Animación de la notificación")]
     private GameObject notificación;
+    
+    [SerializeField, Tooltip("Sistema de particulas del sol")]
+    private ParticleSystem particleSun;
 
     [SerializeField, Tooltip("Lista de planetas a mostrar individualmente")]
     private GameObject[] listPlanets;
     
     [SerializeField, Tooltip("Titulo, Descripcion, Días, Años, Temperatura, Medidas")]
     private TextMeshProUGUI[] textData;
+
+    void Start()
+    {
+        //Deshabilita colisionador de las particulas
+        /*var collision = particleSun.GetComponent<ParticleSystem>().collision;
+        collision.enabled = false;
+        //Habilita loop
+        var main = particleSun.GetComponent<ParticleSystem>().main;
+        main.loop = true;*/
+    }
     
     /// <summary>
     /// Se activa al seleccionar un planeta para mostrar la descripción del mismo
     /// </summary>
     /// <param name="idPlanetSelected">ID del planeta seleccionado</param>
-    public void ActivePlanets(int idPlanetSelected) {
+    public void ActivePlanets(int idPlanetSelected) 
+    {
         if (notificación.activeInHierarchy)
         {
             notificación.GetComponent<Animator>().Play("Out");
@@ -86,7 +103,7 @@ public class SolarSystemController : MonoBehaviour
                 );
                 break;
             default:
-                //ShowSolarSystem();
+                Debug.LogWarning("Opción no encontrada");
                 break;
         }
     }
@@ -103,7 +120,9 @@ public class SolarSystemController : MonoBehaviour
     /// <param name="measure"></param>
     private void PlanetSelectedData(int idPlanet, string name, string description, string day, string year, string temperature, string measure)
     {
+        Debug.Log(idPlanet +". " + name);
         animatorSolarSystem.Play("AnimSolarSystemHide");
+        //animatorInfoPanel.Play("Show");
         HideAllPlanets();
         animatorSolarSystem.gameObject.SetActive(false);
         
