@@ -7,7 +7,7 @@ public class Oscillator : MonoBehaviour
     public Transform rotationCenter;
     [SerializeField, Tooltip("Altura a la que el satélite va a rotar")]
     public float rotationRadius = 0.2f;
-    [SerializeField, Tooltip("")]
+    [SerializeField, Tooltip("Velocidad del satélite")]
     public float angularSpeed = 1f;
     [SerializeField, Tooltip("Canvas en el que se va a desplegar la información")] 
     public GameObject canvasAgua;
@@ -25,7 +25,7 @@ public class Oscillator : MonoBehaviour
             posZ = rotationCenter.position.z + Mathf.Sin(angle) * rotationRadius;
 
             transform.localPosition = new Vector3(posX, posY, posZ);
-            angle = angle + Time.deltaTime * angularSpeed;
+            angle += Time.deltaTime * angularSpeed;
         }
 
         //Si el satelite ya dio 3 vueltas (aprox. 7 grados por vuelta) mostramos la imagen del agua
@@ -34,15 +34,15 @@ public class Oscillator : MonoBehaviour
             angle = 0f;
             completada = true;
             canvasAgua.SetActive(true);
-            StartCoroutine(muestraAgua());
+            StartCoroutine(MuestraAgua());
         }
     }
 
     /// <summary>
-    /// Funcion que detiene la imagen del agua durante 10 segundos
+    ///     Funcion que detiene la imagen del agua durante 10 segundos
     /// </summary>
     /// <returns></returns>
-    private IEnumerator muestraAgua()
+    private IEnumerator MuestraAgua()
     {
         yield return new WaitForSeconds(10);
         canvasAgua.SetActive(false);
