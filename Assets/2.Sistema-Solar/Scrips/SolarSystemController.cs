@@ -6,8 +6,11 @@ using System.Linq;
 
 public class SolarSystemController : MonoBehaviour
 {
-    [SerializeField, Tooltip("Animacion del sistema solar")]
+    [SerializeField, Tooltip("Animación del sistema solar")]
     private Animator animatorSolarSystem;
+    
+    //[SerializeField, Tooltip("Animación del panel informativo")]
+    //private Animator animatorInfoPanel;
 
     [SerializeField, Tooltip("Animación de la notificación")]
     private GameObject notificación;
@@ -24,11 +27,11 @@ public class SolarSystemController : MonoBehaviour
     void Start()
     {
         //Deshabilita colisionador de las particulas
-        var collision = particleSun.GetComponent<ParticleSystem>().collision;
+        /*var collision = particleSun.GetComponent<ParticleSystem>().collision;
         collision.enabled = false;
         //Habilita loop
         var main = particleSun.GetComponent<ParticleSystem>().main;
-        main.loop = true;
+        main.loop = true;*/
     }
     
     /// <summary>
@@ -100,7 +103,7 @@ public class SolarSystemController : MonoBehaviour
                 );
                 break;
             default:
-                //ShowSolarSystem();
+                Debug.LogWarning("Opción no encontrada");
                 break;
         }
     }
@@ -117,7 +120,9 @@ public class SolarSystemController : MonoBehaviour
     /// <param name="measure"></param>
     private void PlanetSelectedData(int idPlanet, string name, string description, string day, string year, string temperature, string measure)
     {
+        Debug.Log(idPlanet +". " + name);
         animatorSolarSystem.Play("AnimSolarSystemHide");
+        //animatorInfoPanel.Play("Show");
         HideAllPlanets();
         animatorSolarSystem.gameObject.SetActive(false);
         
