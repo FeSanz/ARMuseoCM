@@ -6,7 +6,7 @@ public class SoundsPiano : MonoBehaviour
 {
     [Tooltip("Arreglo de audios para el piano")] [SerializeField] AudioClip[] audios;
     [Tooltip("Sistema de particulas de sonido")] [SerializeField] ParticleSystem waves;
-    public float HighDown = -0.08872f;
+    public float HighDown = 1.342f;
     private AudioSource audioSource; //Controlador de audio
     private int numberAudio = 0; //variable para controlar el num de audios a reproducir
     
@@ -26,7 +26,7 @@ public class SoundsPiano : MonoBehaviour
             {
                 if (hit.collider.tag == "tecla")
                 {
-                    hit.collider.transform.localPosition = hit.collider.transform.localPosition + new Vector3(0, HighDown, 0);
+                    hit.collider.transform.localPosition = new Vector3(1.017162f, HighDown, 0);
                     StartCoroutine(ReturnKeyPosition(hit.collider.gameObject));
                     //waves.Play();
                     //NextAudio();
