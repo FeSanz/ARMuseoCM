@@ -14,6 +14,8 @@ Packages/com.ptc.vuforia.engine-10.1.4.tgz
 QCAR/somedata16
 UserSettings/EditorUserSettings.asset
 
+[Aa]ssets/Plugins/GitHub*
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
@@ -63,19 +65,13 @@ sysinfo.txt
 crashlytics-build.properties
 
 ProjectSettings/ProjectSettings.asset
-ProjectSettings/ProjectSettings.asset
 UserSettings/EditorUserSettings.asset
 Assets/7.Estados-Agua/EstadosAguaScene.unity
 ProjectSettings/ProjectSettings.asset
 QCAR/somedata16
 ProjectSettings/URPProjectSettings.asset
-ProjectSettings/URPProjectSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
-UserSettings/EditorUserSettings.asset
 UserSettings/EditorUserSettings.asset
 Assets/3.Agua-Marte/UI/Images/AguaMarteImagen.jpg.meta
 Assets/3.Agua-Marte/UI/Images/AguaMarteImagen.jpg.meta
-QCAR/somedata16
+Assets/Plugins/GitHub.meta
+Assets/Plugins.meta
