@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class SoundsPiano : MonoBehaviour
 {
-    [Tooltip("Arreglo de audios para el piano")] [SerializeField] AudioClip[] audios;
     [Tooltip("Sistema de particulas de sonido")] [SerializeField] ParticleSystem waves;
     public float HighDown = 1.342f;
     private AudioSource audioSource; //Controlador de audio
-    private int numberAudio = 0; //variable para controlar el num de audios a reproducir
     
     void Start()
     {
-        //audioSource = gameObject.GetComponent<AudioSource>();
-        //waves.Stop();
+        waves.Stop();
     }
     
     void Update()
@@ -26,26 +23,16 @@ public class SoundsPiano : MonoBehaviour
             {
                 if (hit.collider.tag == "tecla")
                 {
-                    hit.collider.transform.localPosition = new Vector3(1.017162f, HighDown, 0);
-                    StartCoroutine(ReturnKeyPosition(hit.collider.gameObject));
-                    //waves.Play();
-                    //NextAudio();
+                    GameObject tecla = hit.collider.transform.gameObject;
+                    tecla.transform.localPosition = new Vector3(1.017162f, HighDown, 0);
+                    StartCoroutine(ReturnKeyPosition(tecla));
+                    tecla.GetComponent<AudioSource>().Play();
+                    waves.Play();
+
                 }
 
             }
         }
-    }
-     /// <summary>
-     /// Método para hacer el cambio de audio, al llegar al final del areeglo re reinicia el orden
-     /// </summary>
-    public void NextAudio()
-    {
-        audioSource.clip = audios[numberAudio];
-        if (audios.Length-1 == numberAudio)
-        {
-            numberAudio = 0;
-        }else
-            numberAudio++;
     }
 
     /// <summary>
