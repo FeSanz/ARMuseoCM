@@ -14,6 +14,7 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
     public AudioSource curr;
     float volume = 0.25f;
     float scale = Mathf.Pow(2f, 1.0f / 12f);
+    [Tooltip("Sistema de particulas de sonido")] [SerializeField] ParticleSystem Notes;
     //bool needtoplay = true;
 
     void Start()
@@ -61,6 +62,7 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
         curr.outputAudioMixerGroup = group;
         curr.pitch = Mathf.Pow(scale, tone);
         curr.clip = clip[pitcher.octaveOffset + octave - 1];
+        Notes.Play();
         curr.Play();
     }
     IEnumerator SoundFade(AudioSource source) //sound fade after the button gets unpressed

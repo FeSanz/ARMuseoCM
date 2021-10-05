@@ -24,7 +24,7 @@ public class SoundsPiano : MonoBehaviour
                 if (hit.collider.tag == "tecla")
                 {
                     waves.Play();
-
+                    print("tecla");
                 }
 
             }
