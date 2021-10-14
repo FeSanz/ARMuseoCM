@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 9093687989789905727}
   - component: {fileID: 9093687989789905724}
   - component: {fileID: 9093687989789905725}
-  - component: {fileID: 9093687989789905726}
   m_Layer: 0
   m_Name: ShineFXPRefab
   m_TagString: Untagged
@@ -82,15 +81,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9093687989789905726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9093687989789905720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d43a6754b4b118e49a512bdaaef3bd05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
