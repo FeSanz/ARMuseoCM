@@ -14,9 +14,6 @@ public class SolarSystemController : MonoBehaviour
 
     [SerializeField, Tooltip("Animación de la notificación")]
     private GameObject notificación;
-    
-    [SerializeField, Tooltip("Sistema de particulas del sol")]
-    private ParticleSystem particleSun;
 
     [SerializeField, Tooltip("Lista de planetas a mostrar individualmente")]
     private GameObject[] listPlanets;
@@ -24,16 +21,6 @@ public class SolarSystemController : MonoBehaviour
     [SerializeField, Tooltip("Titulo, Descripcion, Días, Años, Temperatura, Medidas")]
     private TextMeshProUGUI[] textData;
 
-    void Start()
-    {
-        //Deshabilita colisionador de las particulas
-        /*var collision = particleSun.GetComponent<ParticleSystem>().collision;
-        collision.enabled = false;
-        //Habilita loop
-        var main = particleSun.GetComponent<ParticleSystem>().main;
-        main.loop = true;*/
-    }
-    
     /// <summary>
     /// Se activa al seleccionar un planeta para mostrar la descripción del mismo
     /// </summary>
