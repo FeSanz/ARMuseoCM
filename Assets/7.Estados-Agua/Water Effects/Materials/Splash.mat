@@ -22,19 +22,21 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Splash
   m_Shader: {fileID: 4800000, guid: b7839dad95683814aa64166edc107ae2, type: 3}
-  m_ShaderKeywords: _ALPHABLEND_ON _FADING_ON _FLIPBOOKBLENDING_OFF _NORMALMAP _REQUIRE_UV2
-  m_LightmapFlags: 0
+  m_ShaderKeywords: _EMISSION _FADING_ON _FLIPBOOKBLENDING_ON _NORMALMAP _SOFTPARTICLES_ON
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses:
   - ALWAYS
+  - SHADOWCASTER
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 50d576b32d1c88f4abcea02ff8e68dbe, type: 3}
+        m_Texture: {fileID: 2800000, guid: 70d17e9113531f54b808f84430ce0d5e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -54,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 50d576b32d1c88f4abcea02ff8e68dbe, type: 3}
+        m_Texture: {fileID: 2800000, guid: 70d17e9113531f54b808f84430ce0d5e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
