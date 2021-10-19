@@ -22,7 +22,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Rocky Mossy Ground
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _METALLICSPECGLOSSMAP _NORMALMAP _OCCLUSIONMAP _PARALLAXMAP
+  m_ShaderKeywords: _NORMALMAP _OCCLUSIONMAP _PARALLAXMAP
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -34,11 +34,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 2831b826ec231f24197d0f83431c0adc, type: 3}
+        m_Texture: {fileID: 2800000, guid: d661480e286672b40ac72f1f00d05ef2, type: 3}
         m_Scale: {x: 2, y: 1.15}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: c2663dd19bc3fad4b93cd24e8b23e5c4, type: 3}
+        m_Texture: {fileID: 2800000, guid: 34146dcb0610fdd428007dbddf397eb4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control:
@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2831b826ec231f24197d0f83431c0adc, type: 3}
+        m_Texture: {fileID: 2800000, guid: d661480e286672b40ac72f1f00d05ef2, type: 3}
         m_Scale: {x: 2, y: 1.15}
         m_Offset: {x: 0, y: 0}
     - _Mask0:
@@ -102,11 +102,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 73c6509eaacbc7944b5d2528d5ef0c1d, type: 3}
+        m_Texture: {fileID: 2800000, guid: b06dc22679d1c8c49aaddc2afb28f889, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: eba3e9a59d137824592e0ab3f4559b5e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 732baf04f51d02a47bde13ee2a4642ca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:

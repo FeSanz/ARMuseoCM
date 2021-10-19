@@ -22,8 +22,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Grass Fine 04_1K
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_ShaderKeywords: _METALLICSPECGLOSSMAP _OCCLUSIONMAP
-  m_LightmapFlags: 6
+  m_ShaderKeywords: _NORMALMAP _OCCLUSIONMAP _PARALLAXMAP
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
@@ -34,11 +34,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: c2a2c0bd329097e4092e89f44f91001f, type: 3}
-        m_Scale: {x: 4, y: 5}
+        m_Texture: {fileID: 2800000, guid: d41e38f7edb09aa47afbf51e727bfd61, type: 3}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: de7d18b3608f2414caeae861b2ca92e1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6581ceeb71d03f7459692b1e8927a03c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Control:
@@ -62,8 +62,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c2a2c0bd329097e4092e89f44f91001f, type: 3}
-        m_Scale: {x: 4, y: 5}
+        m_Texture: {fileID: 2800000, guid: d41e38f7edb09aa47afbf51e727bfd61, type: 3}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _Mask0:
         m_Texture: {fileID: 0}
@@ -102,11 +102,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 831aba9746e3e0542975f8774b736507, type: 3}
+        m_Texture: {fileID: 2800000, guid: 59f3d454676f9224083e52d85eb28742, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 2cb9d14a2d9e44a42b8c2917f950a1db, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9ebb94af2570acd48a554d5060945638, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -170,13 +170,13 @@ Material:
     - _Metallic2: 0
     - _Metallic3: 0
     - _NumLayersCount: 1
-    - _OcclusionStrength: 1
-    - _Parallax: 0.08
+    - _OcclusionStrength: 0
+    - _Parallax: 0.0146
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SampleGI: 0
     - _Shininess: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0.33
     - _Smoothness0: 0.5
     - _Smoothness1: 0.5
     - _Smoothness2: 0.5
