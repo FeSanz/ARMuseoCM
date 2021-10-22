@@ -64,7 +64,6 @@ public class ARCamController : MonoBehaviour
         _audioInput = recordMicrophone ? new AudioInput(_recorder, _clock, _microphoneSource, true) : null;
         // Unmute microphone
         _microphoneSource.mute = _audioInput == null;
-
     }
 
     /// <summary>

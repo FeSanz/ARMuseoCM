@@ -3,6 +3,8 @@
 *   Copyright (c) 2020 Yusuf Olokoba
 */
 
+using TMPro;
+
 namespace NatSuite.Examples.Components {
 
 	using System.Collections;
@@ -12,7 +14,11 @@ namespace NatSuite.Examples.Components {
 	using UnityEngine.EventSystems;
 
 	[RequireComponent(typeof(EventTrigger))]
-	public class RecordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
+	public class RecordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+	{
+
+		[SerializeField, Tooltip("Texto de porcentaje")]
+		private TextMeshProUGUI textPercentage;
 
 		public Image button, countdown;
 		public UnityEvent onTouchDown, onTouchUp;
@@ -43,7 +49,8 @@ namespace NatSuite.Examples.Components {
 			pressed = false;
 		}
 
-		private IEnumerator Countdown () {
+		private IEnumerator Countdown ()
+		{
 			pressed = true;
 			// First wait a short time to make sure it's not a tap
 			yield return new WaitForSeconds(0.2f);
@@ -56,6 +63,7 @@ namespace NatSuite.Examples.Components {
 			while (pressed && (ratio = (Time.time - startTime) / MaxRecordingTime) < 1.0f) {
 				countdown.fillAmount = ratio;
 				button.fillAmount = 1f - ratio;
+				textPercentage.text = "Grabando \n<b>" +Mathf.Round(ratio * 100).ToString() + "%</b>";
 				yield return null;
 			}
 			// Reset
