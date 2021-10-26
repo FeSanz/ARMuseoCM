@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandler,*/ IPointerDownHandler, IPointerUpHandler
+public class PianoKey : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler/*, IPointerDownHandler, IPointerUpHandler*/
 {
     public int tone, octave;
     public PianoPitcher pitcher;
@@ -22,7 +22,7 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
         clip = pitcher.clip;
         group = pitcher.group;
         piano = pitcher.piano;
-    }
+    }/*
     public void OnPointerDown(PointerEventData eventData) //what happens when the key is pressed
     {
         PlayNote();
@@ -35,8 +35,8 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
         {
             StartCoroutine(SoundFade(curr));
         }
-    }
-    /*public void OnPointerEnter(PointerEventData eventData) some badly working stuff
+    }*/
+    public void OnPointerEnter(PointerEventData eventData) //some badly working stuff
     {
         if (Input.GetMouseButton(0))
         {
@@ -47,13 +47,13 @@ public class PianoKey : MonoBehaviour, /*IPointerEnterHandler, IPointerExitHandl
     public void OnPointerExit(PointerEventData eventData)
     {
 
-        current = false;
+        //current = false;
         GetComponent<Animator>().SetBool("down", false);
         if (curr != null)
         {
             StartCoroutine(SoundFade(curr));
         }
-    }*/
+    }
     void PlayNote() //this part instantiates new audiosources every time the button is pressed
     {
         curr = piano.AddComponent<AudioSource>() as AudioSource;
