@@ -1,9 +1,11 @@
+using System;
 using NatSuite.Recorders;
 using NatSuite.Recorders.Clocks;
 using NatSuite.Recorders.Inputs;
 using NatSuite.Sharing;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class ARCamController : MonoBehaviour
@@ -79,7 +81,21 @@ public class ARCamController : MonoBehaviour
         //Ruta en caso de guardar el video
         var path = await _recorder.FinishWriting();
         Debug.Log($"Saved recording to: {path}");
-        #if UNITY_EDITOR
+        try
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+        
+        
+
+#if UNITY_EDITOR
         return;
         #else 
         var payload = new SharePayload();
