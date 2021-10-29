@@ -24,11 +24,8 @@ EditorBuildSettings:
     path: Assets/5.Mapa-Hidrologico/Scenes/MapaHidrologicoScene.unity
     guid: 710928685a9dfeb48a1e22fe7ac64a10
   - enabled: 1
-    path: Assets/6.Ciclo-Agua/Scene/CicloAguaScene.unity
+    path: Assets/6.Ciclo-Agua/Scene/EstadosAguaScene.unity
     guid: e52b6f4f99bafbc4bac20ea3da338480
-  - enabled: 1
-    path: Assets/7.Estados-Agua/Scene/EstadosAguaScene.unity
-    guid: 7ab2602caabb924439543852bb751342
   - enabled: 1
     path: Assets/8.Energia-Nuclear/Scenes/NuclearScene.unity
     guid: 8d606c496bc43f845952d899cfdaee01
@@ -37,14 +34,11 @@ EditorBuildSettings:
     guid: 97f0fc08468ac544dada17b9dcc4c6bf
   - enabled: 1
     path: Assets/11.Energia-Sonora/Scene/EnergiaSonoraScene.unity
-    guid: e107b3e3fcbac3b4dad5c1674b88e6bf
-  - enabled: 0
-    path: 
-    guid: fdfa2c550e4d668409222db2fc701c6e
-  - enabled: 1
-    path: Assets/13.Relatividad/Scene/RelatividadScene.unity
-    guid: 3d47abaa992c8e14a8bb4bff9cc51e05
+    guid: dc0e9dcbc2740bc41895bc533f4013e3
   - enabled: 1
     path: Assets/12.Energia-Quimica/Scenes/EnergiaQuimicaScene.unity
     guid: 5b89624b9d5dd284e904d2ac7ab385b8
+  - enabled: 1
+    path: Assets/13.Relatividad/Scene/RelatividadScene.unity
+    guid: 3d47abaa992c8e14a8bb4bff9cc51e05
   m_configObjects: {}

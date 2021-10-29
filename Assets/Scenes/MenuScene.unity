@@ -813,7 +813,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 268678220}
   m_OnClick:
     m_PersistentCalls:
@@ -2108,8 +2108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -203, y: 1.4201}
-  m_SizeDelta: {x: 260, y: 260}
+  m_AnchoredPosition: {x: -211.645, y: -7.4355}
+  m_SizeDelta: {x: 333.48, y: 230.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &582169040
 MonoBehaviour:
@@ -2124,14 +2124,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6901961, g: 0.6901961, b: 0.6901961, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c4501f46dc12db54095689617333c9dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8bd7ec1707671db42b21796dea868bbe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2783,8 +2783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -203, y: 1.4201}
-  m_SizeDelta: {x: 330, y: 200}
+  m_AnchoredPosition: {x: -188.161, y: 1.4201}
+  m_SizeDelta: {x: 300.323, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &641777180
 MonoBehaviour:
@@ -3324,8 +3324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 468.9501, y: -88.913086}
-  m_SizeDelta: {x: 807.59, y: 93.3013}
+  m_AnchoredPosition: {x: 498.58, y: -88.913086}
+  m_SizeDelta: {x: 866.84, y: 93.301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779461120
 MonoBehaviour:
@@ -3347,7 +3347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ciclo del agua
+  m_text: Planta tratadora de agua
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
   m_sharedMaterial: {fileID: 21918420405216288, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
@@ -3374,8 +3374,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
-  m_fontSizeBase: 72
+  m_fontSize: 69
+  m_fontSizeBase: 69
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4083,7 +4083,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 873654399}
   m_OnClick:
     m_PersistentCalls:
@@ -4665,7 +4665,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 969024093}
   m_OnClick:
     m_PersistentCalls:
@@ -6950,7 +6950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Energ\xEDa qu\xEDmica"
+  m_text: "Energ\xEDa mec\xE1nica"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
   m_sharedMaterial: {fileID: 21918420405216288, guid: fa328c1ae3ffb6b4583cf371153b0be6, type: 2}
@@ -7411,7 +7411,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1527415453}
   m_OnClick:
     m_PersistentCalls:
@@ -7743,7 +7743,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1632951841}
   m_OnClick:
     m_PersistentCalls:
@@ -10005,7 +10005,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2019295691}
   m_OnClick:
     m_PersistentCalls:
@@ -10838,7 +10838,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6249965926723682843}
   m_Direction: 2
   m_Value: 0.9999999
-  m_Size: 0.5879806
+  m_Size: 0.5614051
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
