@@ -81,7 +81,7 @@ public class ARCamController : MonoBehaviour
         //Ruta en caso de guardar el video
         var path = await _recorder.FinishWriting();
         Debug.Log($"Saved recording to: {path}");
-        try
+        /*try
         {
             if (File.Exists(path))
             {
@@ -91,7 +91,7 @@ public class ARCamController : MonoBehaviour
         catch (Exception e)
         {
             Debug.Log(e);
-        }
+        }*/
         
         
 
