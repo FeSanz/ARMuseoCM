@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AnimalController : MonoBehaviour
 {
+    [SerializeField] Animator notificacion;
+    private bool firtsTouch = false;
     void Update()
     {
 
@@ -18,11 +20,22 @@ public class AnimalController : MonoBehaviour
             {
                 if (hit.transform.tag == "animal")
                 {
-
+                    if (!firtsTouch)
+                    {
+                        firtsTouch = true;
+                        StartCoroutine(animacion());
+                    }
                     var objectScript = hit.collider.GetComponent<DragAndRotateAnimal>();
                     objectScript.isActive = !objectScript.isActive;
                 }
             }
         }
+    }
+
+    IEnumerator animacion()
+    {
+        notificacion.Play("Out");
+        yield return new WaitForSeconds(1);
+        notificacion.gameObject.SetActive(false);
     }
 }
