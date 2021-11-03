@@ -1,35 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class MicroscopioController : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI aumentoTxt;
-    [SerializeField] Camera camaraMicroscopio;
-    public GameObject[] AumentosArray;
-    private int numAumento = 0;
+    [SerializeField] TextMeshProUGUI descripcionTxt;
+    public VideoPlayer videoPlayer;
+    public VideoClip[] videosArray;
+    public string[] descripcionArray;
+    private int numAumento = 1;
     [SerializeField] Button aumentoBtn;
     [SerializeField] Button disminuirBtn;
-    // Start is called before the first frame update
+
     void Start()
     {
         aumentoTxt.SetText("X1");
+        descripcionTxt.SetText(descripcionArray[numAumento-1]);
         disminuirBtn.interactable = false;
     }
 
     public void Aumentar()
     {
-        if (numAumento < AumentosArray.Length-1)
+        if (numAumento < videosArray.Length)
         {
             numAumento++;
-            aumentoTxt.SetText("X" + (numAumento + 1 ));
-            camaraMicroscopio.fieldOfView = camaraMicroscopio.fieldOfView - 4;
+            aumentoTxt.SetText("X" + (numAumento));
+            descripcionTxt.SetText(descripcionArray[numAumento - 1]);
+            videoPlayer.clip = videosArray[numAumento - 1];
             disminuirBtn.interactable = true;
-            //AumentosArray[numAumento].SetActive(true);
         }
-        if(numAumento == AumentosArray.Length - 1)
+        if(numAumento == videosArray.Length)
         {
             aumentoBtn.interactable = false;
         }
@@ -37,15 +39,15 @@ public class MicroscopioController : MonoBehaviour
 
     public void Disminuir()
     {
-        if (numAumento > 0)
+        if (numAumento > 1)
         {
             numAumento--;
-            aumentoTxt.SetText("X" + (numAumento + 1));
+            aumentoTxt.SetText("X" + (numAumento));
+            descripcionTxt.SetText(descripcionArray[numAumento - 1]);
+            videoPlayer.clip = videosArray[numAumento - 1];
             aumentoBtn.interactable = true;
-            camaraMicroscopio.fieldOfView = camaraMicroscopio.fieldOfView + 4;
-            //AumentosArray[numAumento].SetActive(true);
         }
-        if (numAumento == 0)
+        if (numAumento == 1)
         {
             disminuirBtn.interactable = false;
         }
