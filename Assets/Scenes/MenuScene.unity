@@ -3686,7 +3686,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 806840946}
   m_OnClick:
     m_PersistentCalls:
@@ -3700,7 +3700,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: EnergiaQuimicaScene
+          m_StringArgument: MecanicaScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &806840946
@@ -4083,7 +4083,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 873654399}
   m_OnClick:
     m_PersistentCalls:
@@ -4097,7 +4097,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CicloAguaScene
+          m_StringArgument: TratadoraScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &873654399
