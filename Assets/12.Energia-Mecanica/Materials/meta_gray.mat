@@ -7,14 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: water
-  m_Shader: {fileID: -6465566751694194690, guid: a7239783a668a8d43843c803bb299004, type: 3}
+  m_Name: meta_gray
+  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -27,12 +28,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
+    - _DetailAlbedoMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _MainNormal:
-        m_Texture: {fileID: 2800000, guid: bb4d659afde9b9749823cda728cbcc46, type: 3}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -47,8 +56,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SecondNormal:
-        m_Texture: {fileID: 2800000, guid: 082f50cc4e758aa4190851859615f1c2, type: 3}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -71,38 +80,36 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _Depth: -2.01
-    - _Displacement: 0.1
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Metallic: 0
-    - _NormalStrength: 0.553
+    - _Metallic: 0.79
     - _OcclusionStrength: 1
+    - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0.808
+    - _Smoothness: 0.566
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Strength: 1.76
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Tiling_XY: {r: 3, g: 3, b: 0, a: 0}
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepColor: {r: 0.25944337, g: 0.6108288, b: 0.618, a: 0.8784314}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.057938762, g: 0.5653884, b: 0.5849056, a: 1}
-    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &1752909183705680201
+--- !u!114 &5694093653632109360
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,4 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 1
+  version: 4
