@@ -123,7 +123,7 @@ public class SolarSystemController : MonoBehaviour
     /// <param name="measure"></param>
     private void PlanetSelectedData(int idPlanet, string name, string description, string day, string year, string temperature, string measure, string distance)
     {
-        animatorSolarSystem.Play("AnimSolarSystemHide");
+        animatorSolarSystem.Play("Hide");
         HideAllPlanets();
         animatorSolarSystem.gameObject.SetActive(false);
         

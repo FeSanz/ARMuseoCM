@@ -1,42 +1,59 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PhaseController : MonoBehaviour
 {
-    [SerializeField, Tooltip("Prefabs de asteroides")]
-    private Transform MeteoiritePrefab;
+    [SerializeField, Tooltip("Audios de cada etapa")]
+    private AudioSource[] AudioStage;
+    
+    [SerializeField, Tooltip("Velocidad de aparicion de cada shader en transisición")]
+    private float Increase = 0.005f;
 
-    [SerializeField, Tooltip("Tiempo de aparición de meteoritos")]
-    private float timeBeetweenMeteorites = 0.50f;
+    private float[] _stageValue = {1, 0, 0, 0};
+    private Material _materialEarth;
 
-    private int _currentMeteorites = 0;
-    void Start () 
+    void Start()
     {
-        StartCoroutine (SpawnEnemies());
+        _materialEarth = GetComponent<Renderer>().material;
     }
-    IEnumerator SpawnEnemies()//indicamos corutina
+    IEnumerator StageController()
     {
-        yield return new WaitForSeconds (2);//esperamos 2 segundos antes de mostrar meteoritos
-        while(true)
+        AudioStage[0].Play();
+        yield return new WaitForSeconds (2);
+
+        AudioStage[1].Play();
+        while (_stageValue[0] >= 0)
         {
-            if(_currentMeteorites <= 0)//no crees nada hasta que la oleada de enemigos previa se hayya eliminado
-            {
-                for(int i = 0; i< 3; i++)//enemigos leatorios si no hay enemigos creo 10 mas
-                {
-                    float randDistance = Random.Range (10, 25);//distancia de aparicion
-                    Vector2 randDirection = Random.insideUnitCircle;//punto alazar de la circunferencia
-                    Vector3 meteoritePos = transform.position;//posicion del gamecontroller (0,0,0)
-                    meteoritePos.x += randDirection.x * randDistance;
-                    meteoritePos.y += randDirection.y * randDistance;
-                    Instantiate (MeteoiritePrefab, meteoritePos, transform.rotation);//instanciamos el enemigo en pantalla
-                    _currentMeteorites++;
-                    yield return new WaitForSeconds (timeBeetweenMeteorites);//corrutina dormida durante 0.25 seg
-
-                }
-            }
-            yield return new WaitForSeconds (2.2f);//ya tengo enemigos y espero 2 seg mas
-
+            _stageValue[0] -= Increase;
+            _materialEarth.SetFloat("FloatState", _stageValue[0]); 
+            yield return new WaitForSeconds(0.1f);
         }
+        yield return new WaitForSeconds (2);
+        
+
+        AudioStage[2].Play();
+        while (_stageValue[1] <= 1)
+        {
+            _stageValue[1] += Increase;
+            _materialEarth.SetFloat("FloatPangea", _stageValue[1]); 
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds (2);
+
+
+        AudioStage[3].Play();
+        while (_stageValue[2] <= 1)
+        {
+            _stageValue[2] += Increase;
+            _materialEarth.SetFloat("FloatEarth", _stageValue[2]); 
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    public void StartStage()
+    {
+        StartCoroutine(StageController());
     }
 }
