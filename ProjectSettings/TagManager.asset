@@ -8,6 +8,7 @@ TagManager:
   - piano
   - tecla
   - animal
+  - rotable
   layers:
   - Default
   - TransparentFX
