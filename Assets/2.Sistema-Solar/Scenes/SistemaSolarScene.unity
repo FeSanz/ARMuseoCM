@@ -334,7 +334,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 47260218}
-  - component: {fileID: 47260219}
   m_Layer: 0
   m_Name: EllipseNeptuno
   m_TagString: Untagged
@@ -356,22 +355,6 @@ Transform:
   m_Father: {fileID: 1456459002}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &47260219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47260217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80172e05ed6ad6a4089fa982915e52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 200
-  planet: {fileID: 123393605}
-  detailEllipse: 10
-  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &69676378
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,9 +904,9 @@ GameObject:
   - component: {fileID: 122993407}
   - component: {fileID: 122993406}
   - component: {fileID: 122993405}
-  - component: {fileID: 122993404}
   - component: {fileID: 122993408}
   - component: {fileID: 122993409}
+  - component: {fileID: 122993410}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -931,25 +914,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &122993404
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122993403}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e611d9746fca9ca4095d4c1d75418134, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &122993405
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1067,6 +1031,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3.26
   m_Center: {x: 0.034299854, y: 0.00000017887785, z: 0.000006079635}
+--- !u!114 &122993410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122993403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac8bc41476f204a931b8b48c384377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ellipeseplanet: {fileID: 1529085659}
+  radius: 6
+  speed: 0.25
+  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &123393605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,9 +1058,9 @@ GameObject:
   - component: {fileID: 123393609}
   - component: {fileID: 123393608}
   - component: {fileID: 123393607}
-  - component: {fileID: 123393606}
   - component: {fileID: 123393610}
   - component: {fileID: 123393611}
+  - component: {fileID: 123393612}
   m_Layer: 0
   m_Name: Neptuno
   m_TagString: Untagged
@@ -1088,25 +1068,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &123393606
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123393605}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9520c4e27b8e49a4393d38a8d67d33ee, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &123393607
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1224,6 +1185,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.44
   m_Center: {x: 0.03429604, y: 0.00000023841856, z: 0.000006079634}
+--- !u!114 &123393612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123393605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac8bc41476f204a931b8b48c384377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ellipeseplanet: {fileID: 47260217}
+  radius: 21
+  speed: 0.25
+  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &123396018
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,7 +1311,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 123427085}
-  - component: {fileID: 123427086}
   m_Layer: 0
   m_Name: EllipseSaturm
   m_TagString: Untagged
@@ -1356,22 +1332,6 @@ Transform:
   m_Father: {fileID: 1456459002}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &123427086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123427084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80172e05ed6ad6a4089fa982915e52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 150
-  planet: {fileID: 508222206}
-  detailEllipse: 10
-  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &147641520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2120,6 +2080,35 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 243990629}
   m_Mesh: {fileID: 4300000, guid: f0ca23537f2bb264583052a747cbf8d9, type: 3}
+--- !u!21 &262877629
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'target_mcmMaterial
+
+    184646'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b26fbe992a0b51145b2137233e3a8583, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &269377174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,7 +2322,7 @@ GameObject:
   - component: {fileID: 286737810}
   - component: {fileID: 286737811}
   m_Layer: 0
-  m_Name: Light (1)
+  m_Name: Light02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3584,9 +3573,9 @@ GameObject:
   m_Component:
   - component: {fileID: 508222210}
   - component: {fileID: 508222209}
-  - component: {fileID: 508222207}
   - component: {fileID: 508222211}
   - component: {fileID: 508222212}
+  - component: {fileID: 508222208}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -3594,25 +3583,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &508222207
-Animator:
-  serializedVersion: 3
+--- !u!114 &508222208
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508222206}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1170cbe9e07fabf4991acaa0ced350fc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac8bc41476f204a931b8b48c384377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ellipeseplanet: {fileID: 123427084}
+  radius: 16.5
+  speed: 0.29
+  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!33 &508222209
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4095,9 +4081,9 @@ GameObject:
   - component: {fileID: 573284019}
   - component: {fileID: 573284018}
   - component: {fileID: 573284017}
-  - component: {fileID: 573284016}
   - component: {fileID: 573284020}
   - component: {fileID: 573284021}
+  - component: {fileID: 573284022}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -4105,25 +4091,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &573284016
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573284015}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f0eacbbdd23d0814ea2fc652540a8f74, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &573284017
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4241,6 +4208,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 8.9
   m_Center: {x: 0.08523715, y: 0.06648182, z: -0.0029719004}
+--- !u!114 &573284022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573284015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac8bc41476f204a931b8b48c384377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ellipeseplanet: {fileID: 916923913}
+  radius: 4.5
+  speed: 0.2
+  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &607726274
 GameObject:
   m_ObjectHideFlags: 0
@@ -4409,7 +4392,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1144720480}
+  - {fileID: 262877629}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6830,7 +6813,7 @@ GameObject:
   - component: {fileID: 903187649}
   - component: {fileID: 903187648}
   m_Layer: 0
-  m_Name: Light
+  m_Name: Light01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6848,7 +6831,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 0.63
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -7022,7 +7005,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916923914}
-  - component: {fileID: 916923915}
   m_Layer: 0
   m_Name: EllipseMercury
   m_TagString: Untagged
@@ -7044,22 +7026,6 @@ Transform:
   m_Father: {fileID: 1456459002}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &916923915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916923913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80172e05ed6ad6a4089fa982915e52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 40
-  planet: {fileID: 573284015}
-  detailEllipse: 10
-  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &926132771
 GameObject:
   m_ObjectHideFlags: 0
@@ -7473,7 +7439,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 966918034}
-  - component: {fileID: 966918035}
   m_Layer: 0
   m_Name: EllipseJupiter
   m_TagString: Untagged
@@ -7495,22 +7460,6 @@ Transform:
   m_Father: {fileID: 1456459002}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &966918035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966918033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80172e05ed6ad6a4089fa982915e52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 120
-  planet: {fileID: 1924293205}
-  detailEllipse: 10
-  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &973359443
 GameObject:
   m_ObjectHideFlags: 0
@@ -7723,9 +7672,9 @@ GameObject:
   m_Component:
   - component: {fileID: 986433582}
   - component: {fileID: 986433581}
-  - component: {fileID: 986433579}
   - component: {fileID: 986433583}
   - component: {fileID: 986433584}
+  - component: {fileID: 986433580}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -7733,25 +7682,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &986433579
-Animator:
-  serializedVersion: 3
+--- !u!114 &986433580
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986433578}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 86cb4303d76f74b419e6864bad5529b2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac8bc41476f204a931b8b48c384377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ellipeseplanet: {fileID: 1357518223}
+  radius: 8
+  speed: 0.3
+  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!33 &986433581
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8069,8 +8015,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200, y: 0}
-  m_SizeDelta: {x: 364, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1035630026
 MonoBehaviour:
@@ -8194,9 +8140,9 @@ GameObject:
   - component: {fileID: 1070980526}
   - component: {fileID: 1070980525}
   - component: {fileID: 1070980524}
-  - component: {fileID: 1070980523}
   - component: {fileID: 1070980527}
   - component: {fileID: 1070980528}
+  - component: {fileID: 1070980529}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -8204,25 +8150,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1070980523
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1070980522}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb704acc8dda9334fb4b5889f771888e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &1070980524
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8340,6 +8267,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4
   m_Center: {x: 0.034292225, y: 0.00000011920932, z: 0.000007986995}
+--- !u!114 &1070980529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070980522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac8bc41476f204a931b8b48c384377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ellipeseplanet: {fileID: 1524726988}
+  radius: 10
+  speed: 0.33
+  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1081132923
 GameObject:
   m_ObjectHideFlags: 0
@@ -8825,14 +8768,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142741369}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 0.010909, y: 0.019323, z: -0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9379, y: 0.9379, z: 0.9379}
   m_Children:
   - {fileID: 75573073687602679}
   m_Father: {fileID: 1456459002}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!23 &1142741371
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8936,35 +8879,6 @@ MonoBehaviour:
             m_StringArgument: Show
             m_BoolArgument: 0
           m_CallState: 2
---- !u!21 &1144720480
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'target_mcmMaterial
-
-    24958'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b26fbe992a0b51145b2137233e3a8583, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1146333187
 GameObject:
   m_ObjectHideFlags: 0
@@ -11150,7 +11064,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357518224}
-  - component: {fileID: 1357518225}
   m_Layer: 0
   m_Name: EllipseEarth
   m_TagString: Untagged
@@ -11172,22 +11085,6 @@ Transform:
   m_Father: {fileID: 1456459002}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1357518225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357518223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80172e05ed6ad6a4089fa982915e52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 70
-  planet: {fileID: 986433578}
-  detailEllipse: 10
-  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1362286126
 GameObject:
   m_ObjectHideFlags: 0
@@ -11454,6 +11351,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388869420}
   m_CullTransparentMesh: 0
+--- !u!1 &1394558188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394558189}
+  - component: {fileID: 1394558191}
+  - component: {fileID: 1394558190}
+  m_Layer: 5
+  m_Name: Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1394558189
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394558188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9136689495104306019}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1394558190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394558188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300002, guid: 88dca061d041a2a4596563e6a38f66c8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1394558191
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394558188}
+  m_CullTransparentMesh: 1
 --- !u!1 &1405667566
 GameObject:
   m_ObjectHideFlags: 0
@@ -11922,9 +11894,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1432667158}
   - component: {fileID: 1432667157}
-  - component: {fileID: 1432667155}
   - component: {fileID: 1432667159}
   - component: {fileID: 1432667160}
+  - component: {fileID: 1432667156}
   m_Layer: 0
   m_Name: Urano
   m_TagString: Untagged
@@ -11932,25 +11904,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1432667155
-Animator:
-  serializedVersion: 3
+--- !u!114 &1432667156
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432667154}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dff15861c17e9df44804f88da0d400dc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac8bc41476f204a931b8b48c384377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ellipeseplanet: {fileID: 2072054024}
+  radius: 19
+  speed: 0.28
+  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!33 &1432667157
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -12053,14 +12022,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442324962}
-  m_LocalRotation: {x: 0.11123302, y: -0.78551686, z: 0.08535208, w: 0.60274833}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.0044928193, y: 0.00088966463, z: -0.067793556}
   m_LocalScale: {x: 2.5524786, y: 2.5524797, z: 2.5524778}
   m_Children:
   - {fileID: 1099948523}
   m_Father: {fileID: 6286429294223328706}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!23 &1442324964
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12160,7 +12129,6 @@ GameObject:
   - component: {fileID: 1456459002}
   - component: {fileID: 1456459001}
   - component: {fileID: 1456459000}
-  - component: {fileID: 1456459003}
   m_Layer: 0
   m_Name: SolarSystem
   m_TagString: Untagged
@@ -12208,7 +12176,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456458999}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f4a8a289d8f33c546af3199f8d9e4e51, type: 2}
   m_CullingMode: 0
@@ -12250,28 +12218,6 @@ Transform:
   m_Father: {fileID: 630640675}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1456459003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456458999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4e68c2f980409d49ac04e37aa711b6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TraslationAnim:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speed: 0.9
 --- !u!1 &1477147707
 GameObject:
   m_ObjectHideFlags: 0
@@ -12659,7 +12605,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1524726989}
-  - component: {fileID: 1524726990}
   m_Layer: 0
   m_Name: EllipseMars
   m_TagString: Untagged
@@ -12681,22 +12626,6 @@ Transform:
   m_Father: {fileID: 1456459002}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1524726990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1524726988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80172e05ed6ad6a4089fa982915e52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 90
-  planet: {fileID: 1070980522}
-  detailEllipse: 10
-  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1529085659
 GameObject:
   m_ObjectHideFlags: 0
@@ -12706,7 +12635,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1529085660}
-  - component: {fileID: 1529085661}
   m_Layer: 0
   m_Name: EllipseVenus
   m_TagString: Untagged
@@ -12728,22 +12656,6 @@ Transform:
   m_Father: {fileID: 1456459002}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1529085661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529085659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80172e05ed6ad6a4089fa982915e52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 50
-  planet: {fileID: 122993403}
-  detailEllipse: 10
-  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1530354980
 GameObject:
   m_ObjectHideFlags: 0
@@ -16179,9 +16091,9 @@ GameObject:
   - component: {fileID: 1924293209}
   - component: {fileID: 1924293208}
   - component: {fileID: 1924293207}
-  - component: {fileID: 1924293206}
   - component: {fileID: 1924293210}
   - component: {fileID: 1924293211}
+  - component: {fileID: 1924293212}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -16189,25 +16101,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1924293206
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924293205}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 820af4aed847c6b4abf43514b2be15ed, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &1924293207
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16325,6 +16218,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 2.84
   m_Center: {x: 0.034299854, y: 0.0000002384825, z: 0.000006079666}
+--- !u!114 &1924293212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924293205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ac8bc41476f204a931b8b48c384377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ellipeseplanet: {fileID: 966918033}
+  radius: 13.5
+  speed: 0.36
+  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1947482970
 GameObject:
   m_ObjectHideFlags: 0
@@ -17281,7 +17190,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2072054025}
-  - component: {fileID: 2072054026}
   m_Layer: 0
   m_Name: EllipseUrano
   m_TagString: Untagged
@@ -17303,22 +17211,6 @@ Transform:
   m_Father: {fileID: 1456459002}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2072054026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072054024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80172e05ed6ad6a4089fa982915e52cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointsCount: 180
-  planet: {fileID: 1432667154}
-  detailEllipse: 10
-  materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &2084523609
 GameObject:
   m_ObjectHideFlags: 0
@@ -18243,7 +18135,7 @@ GameObject:
   - component: {fileID: 5709031459531475629}
   - component: {fileID: 5219751074991356081}
   - component: {fileID: 404088291820408316}
-  - component: {fileID: 1355885319611470570}
+  - component: {fileID: 538319124979397050}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -18251,6 +18143,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &538319124979397050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538319124979397049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138106a0636c6624d8ca6538aea13c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!23 &706782576540707449
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18300,63 +18205,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6501647294470786542}
   m_Mesh: {fileID: 2961608846962969390, guid: c71b7f485eb4c344f86656cd405851b9, type: 3}
---- !u!95 &913208626466546564
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3449719893297193063}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1170cbe9e07fabf4991acaa0ced350fc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &1355885319611470570
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538319124979397049}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 820af4aed847c6b4abf43514b2be15ed, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &1589790937548217668
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3562275159556538408}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e611d9746fca9ca4095d4c1d75418134, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1799825677565521751
 Transform:
   m_ObjectHideFlags: 0
@@ -18383,7 +18231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4728817300747486580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.011932, y: -0.0000021458, z: 0.0014224}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1455487114}
@@ -18397,25 +18245,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6552275688174755119}
   m_Mesh: {fileID: -425171608731709130, guid: c71b7f485eb4c344f86656cd405851b9, type: 3}
---- !u!95 &2208865519462853969
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7097105744183837467}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dff15861c17e9df44804f88da0d400dc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!23 &2212908638967061434
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18457,25 +18286,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &2393247849077906340
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6501647294470786542}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb704acc8dda9334fb4b5889f771888e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &2527872304267494268
 Animator:
   serializedVersion: 3
@@ -29091,8 +28901,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6552275688174755119}
-  m_LocalRotation: {x: 0, y: 0, z: 0.19936788, w: 0.97992474}
-  m_LocalPosition: {x: -0.0025175, y: -0.00000047684, z: 0.0010686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7856294271215019022}
@@ -29102,7 +28912,7 @@ Transform:
   - {fileID: 7856294271215006496}
   m_Father: {fileID: 1455487114}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 23}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3320688813369568088
 GameObject:
   m_ObjectHideFlags: 0
@@ -29330,7 +29140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799825677565521751}
   - component: {fileID: 4720677499147941786}
-  - component: {fileID: 913208626466546564}
+  - component: {fileID: 3449719893297193064}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -29338,6 +29148,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &3449719893297193064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449719893297193063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138106a0636c6624d8ca6538aea13c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!1 &3562275159556538408
 GameObject:
   m_ObjectHideFlags: 0
@@ -29349,7 +29172,7 @@ GameObject:
   - component: {fileID: 8866291488605459527}
   - component: {fileID: 4515635630528207120}
   - component: {fileID: 5616828111293429539}
-  - component: {fileID: 1589790937548217668}
+  - component: {fileID: 3562275159556538409}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -29357,6 +29180,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &3562275159556538409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562275159556538408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138106a0636c6624d8ca6538aea13c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!114 &3748171005588389809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30233,25 +30069,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3562275159556538408}
   m_Mesh: {fileID: 6747343349140049259, guid: c71b7f485eb4c344f86656cd405851b9, type: 3}
---- !u!95 &4577041211562071808
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590258777131213752}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f0eacbbdd23d0814ea2fc652540a8f74, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!33 &4720677499147941786
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -30271,7 +30088,7 @@ GameObject:
   - component: {fileID: 1903911424636977294}
   - component: {fileID: 8184726672472519362}
   - component: {fileID: 4763359515552224117}
-  - component: {fileID: 7056936150100076468}
+  - component: {fileID: 4728817300747486581}
   m_Layer: 0
   m_Name: Neptuno
   m_TagString: Untagged
@@ -30279,6 +30096,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &4728817300747486581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4728817300747486580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138106a0636c6624d8ca6538aea13c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!23 &4763359515552224117
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30399,7 +30229,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6501647294470786542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0036237, y: 0.00000095367, z: 0.000063235}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1455487114}
@@ -30426,14 +30256,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7097105744183837467}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.0023600566, y: -0.001861648, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.86903167, y: 0.86903113, z: 0.8690313}
   m_Children:
   - {fileID: 1442324963}
   m_Father: {fileID: 1455487114}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6501647294470786542
 GameObject:
   m_ObjectHideFlags: 0
@@ -30445,7 +30275,7 @@ GameObject:
   - component: {fileID: 6165393695379926960}
   - component: {fileID: 720767308904274966}
   - component: {fileID: 9201430328467381372}
-  - component: {fileID: 2393247849077906340}
+  - component: {fileID: 6501647294470786543}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -30453,6 +30283,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &6501647294470786543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501647294470786542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138106a0636c6624d8ca6538aea13c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!4 &6509757138403609762
 Transform:
   m_ObjectHideFlags: 0
@@ -30477,7 +30320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2955974647768180521}
   - component: {fileID: 2174124345380134828}
-  - component: {fileID: 7079599937954505875}
+  - component: {fileID: 6552275688174755120}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -30485,6 +30328,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &6552275688174755120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6552275688174755119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138106a0636c6624d8ca6538aea13c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!114 &6657858122775179332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30795,25 +30651,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7405509691150009077}
   m_Mesh: {fileID: 4300000, guid: af12e40ab2a7e0a49922f7dcd44b2f0b, type: 2}
---- !u!95 &7056936150100076468
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4728817300747486580}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9520c4e27b8e49a4393d38a8d67d33ee, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7057805653303057612
 GameObject:
   m_ObjectHideFlags: 0
@@ -31025,25 +30862,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7057805655028976716}
   m_CullTransparentMesh: 1
---- !u!95 &7079599937954505875
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6552275688174755119}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 86cb4303d76f74b419e6864bad5529b2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7097105744183837467
 GameObject:
   m_ObjectHideFlags: 0
@@ -31054,7 +30872,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6286429294223328706}
   - component: {fileID: 8507037481866164140}
-  - component: {fileID: 2208865519462853969}
+  - component: {fileID: 7097105744183837468}
   m_Layer: 0
   m_Name: Urano
   m_TagString: Untagged
@@ -31062,6 +30880,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &7097105744183837468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097105744183837467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138106a0636c6624d8ca6538aea13c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!33 &7328507440213823912
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -32489,7 +32320,7 @@ GameObject:
   - component: {fileID: 9212014375301316282}
   - component: {fileID: 7328507440213823912}
   - component: {fileID: 706782576540707449}
-  - component: {fileID: 4577041211562071808}
+  - component: {fileID: 8590258777131213753}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -32497,6 +32328,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &8590258777131213753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590258777131213752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138106a0636c6624d8ca6538aea13c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
 --- !u!4 &8866291488605459527
 Transform:
   m_ObjectHideFlags: 0
@@ -32504,13 +32348,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3562275159556538408}
-  m_LocalRotation: {x: -0.7070799, y: -0.0061705937, z: -0.006170594, w: 0.7070798}
-  m_LocalPosition: {x: 0.0013362, y: 0.00000047683, z: 0.00002331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1455487114}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -90, y: -1.0000002, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!222 &9136689495104306016
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32539,8 +32383,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300002, guid: 88dca061d041a2a4596563e6a38f66c8, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -32627,14 +32471,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1394558189}
   m_Father: {fileID: 7830770454501661477}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 242, y: 0}
-  m_SizeDelta: {x: 45, y: 45}
+  m_AnchoredPosition: {x: 239, y: 0.0000076294}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &9136689495104306020
 GameObject:
@@ -32703,10 +32548,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8590258777131213752}
-  m_LocalRotation: {x: -0.7070799, y: -0.006170593, z: -0.006170593, w: 0.7070798}
-  m_LocalPosition: {x: 0.0087795, y: 0.0000014305, z: 0.00015318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1455487114}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: -1, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

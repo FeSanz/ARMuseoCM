@@ -136,10 +136,6 @@ public class SolarSystemController : MonoBehaviour
         textData[6].text = distance;
         
         listPlanets[idPlanet - 1].SetActive(true);
-        if (idPlanet != 9)
-        {
-            listPlanets[idPlanet - 1].GetComponent<Animator>().SetTrigger("rotation");
-        }
     }
 
     /// <summary>

@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 80172e05ed6ad6a4089fa982915e52cf
+guid: 70ac8bc41476f204a931b8b48c384377
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - planet: {instanceID: 0}
-  - materialEllipse: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
