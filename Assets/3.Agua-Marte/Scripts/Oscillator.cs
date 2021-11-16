@@ -48,4 +48,11 @@ public class Oscillator : MonoBehaviour
         canvasAgua.SetActive(false);
         completada = false;
     }
+
+    public void ParaCorrutina()
+    {
+        StopCoroutine(MuestraAgua());
+        canvasAgua.SetActive(false);
+        completada = false;
+    }
 }
