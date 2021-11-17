@@ -6,9 +6,17 @@ public class AnimalController : MonoBehaviour
 {
     [SerializeField] Animator notificacion;
     private bool firtsTouch = false;
+    [SerializeField] GameObject snackbar;
     void Update()
     {
-
+        if (AudioSettings.Mobile.muteState)
+        {
+            snackbar.SetActive(true);
+        }
+        else
+        {
+            snackbar.SetActive(false);
+        }
         if (Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
 

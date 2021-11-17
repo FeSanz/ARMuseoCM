@@ -6,7 +6,8 @@ public class DragAndRotate : MonoBehaviour
 {
     public bool isActive = false;
     Color activeColor = new Color();
-
+    public enum Eje { x, y, z };
+    [SerializeField] Eje eje;
     // Update is called once per frame
     void Update()
     {
