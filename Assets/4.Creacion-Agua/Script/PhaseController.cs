@@ -11,6 +11,9 @@ public class PhaseController : MonoBehaviour
     
     [SerializeField, Tooltip("Meteoritos")]
     private GameObject[] Meteorito;
+
+    [SerializeField, Tooltip("Aureola de fuego")]
+    private GameObject Halo;
     
     [SerializeField, Tooltip("Velocidad de aparicion de cada shader en transisición")]
     private float speed = 0.5f;
@@ -40,6 +43,11 @@ public class PhaseController : MonoBehaviour
                     _stageValue -= Time.deltaTime * speed;
                     _materialEarth.SetFloat("FloatEarth", _stageValue);
                 }
+
+                if (_stage == 0)
+                {
+                    
+                }
                 break;
             case 2:
                 if (_stageValue >= 0)
@@ -62,9 +70,6 @@ public class PhaseController : MonoBehaviour
                     _materialEarth.SetFloat("FloatEarth", _stageValue);
                 }
                 break;
-            default:
-                Debug.Log("Esperando estapa...");
-                break;
         }
     }
     IEnumerator StageController()
@@ -77,10 +82,18 @@ public class PhaseController : MonoBehaviour
         StartCoroutine(ActiveMeteorite());
         _stageValue = 1;
         _stage = 1;
+        gameObject.GetComponent<LookAtCamera>().enabled = true;
+        Halo.SetActive(true);
         titulo.text = "ETAPA 1";
         descripcion.text = "La temperatura de la tierra primitiva era demasiado alta, de tal manera que con ayuda del impacto de " +
                            "meteoritos y las erupciones volcánicas generaron explosiones que expulsaban vapor de agua";
         yield return new WaitForSeconds (16);
+        foreach (GameObject item in Meteorito)
+        {
+            item.SetActive(false);
+        }
+        Halo.SetActive(false);
+        gameObject.GetComponent<LookAtCamera>().enabled = false;
         
         //FloatState 1 - 0
         AudioStage[2].Play();
@@ -88,20 +101,22 @@ public class PhaseController : MonoBehaviour
         _stage = 2;
         titulo.text = "ETAPA 2";
         descripcion.text = "Al enfriarse la tierra el vapor de agua se fue condensando provocando numerosas lluvias, generando así los océanos";
-        yield return new WaitForSeconds (10);
+        yield return new WaitForSeconds (5);
+        _stageValue = 0;
+        _stage = 3;
+        yield return new WaitForSeconds (5);
         
         //FloatPangea 0 - 1
         AudioStage[3].Play();
-        _stageValue = 0;
-        _stage = 3;
         titulo.text = "ETAPA 3";
         descripcion.text = "La superficie del agua acumulada en la Tierra se recicla a través de un ciclo permanente generando así lagos, ríos y manantiales";
-        yield return new WaitForSeconds (11);
+        yield return new WaitForSeconds (6);
+        _stageValue = 0;
+        _stage = 4;
+        yield return new WaitForSeconds (5);
         
         //FloatEarth 0 - 1
         AudioStage[4].Play();
-        _stageValue = 0;
-        _stage = 4;
         titulo.text = "ETAPA 4";
         descripcion.text = "El agua en la tierra en la actualidad es necesaria para la formación de otras moléculas que son responsables del origen de la vida en la Tierra";
     }
@@ -109,13 +124,13 @@ public class PhaseController : MonoBehaviour
     IEnumerator ActiveMeteorite()
     {
         Meteorito[0]. SetActive(true);
-        yield return new WaitForSeconds (3);
+        yield return new WaitForSeconds (4);
         Meteorito[1]. SetActive(true);
-        yield return new WaitForSeconds (3);
+        yield return new WaitForSeconds (4);
         Meteorito[2]. SetActive(true);
-        yield return new WaitForSeconds (3);
+        yield return new WaitForSeconds (4);
         Meteorito[3]. SetActive(true);
-        yield return new WaitForSeconds (3);
+        yield return new WaitForSeconds (4);
     }
     public void StartStage()
     {
