@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,7 +16,16 @@ public class UIMenuBahaviour : MonoBehaviour
 
     [SerializeField, Tooltip("Animacion de alerta de permisos")]
     private Animator AlertPermissionAnim;
-    
+
+    private void Awake()
+    {
+        foreach (string file in Directory.GetFiles("Assets", "Delete This File.txt", SearchOption.AllDirectories)) 
+        {
+            Debug.Log (file);
+            // File.Delete(file);      
+        }
+    }
+
     void Start ()
     {
         #if PLATFORM_ANDROID
@@ -69,7 +79,6 @@ public class UIMenuBahaviour : MonoBehaviour
     
     private IEnumerator AskForPermissions()
     {
-#if UNITY_ANDROID
         List<bool> permissions = new List<bool>() { false, false, false, false };
         List<bool> permissionsAsked = new List<bool>() { false, false, false, false };
         List<Action> actions = new List<Action>()
@@ -120,7 +129,6 @@ public class UIMenuBahaviour : MonoBehaviour
             }
             yield return new WaitForEndOfFrame();
         }
-#endif
     }
 
     public void ExitOfApplication()
