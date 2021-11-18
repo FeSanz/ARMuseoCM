@@ -90,3 +90,8 @@ Assets/Omitidos/7.Estados-Agua/Prefabs.meta
 ProjectSettings/EditorBuildSettings.asset
 UserSettings/EditorUserSettings.asset
 *.asset
+AssetBundles/Android/Android
+*.manifest
+AssetBundles/Android/materials
+AssetBundles/Android/models
+AssetBundles/Android/textures
