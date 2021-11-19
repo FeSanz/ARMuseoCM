@@ -18,7 +18,6 @@ public class MeshController : MonoBehaviour
 
     private Slider slider;
     
-    
     void Start()
     {
         slider = GetComponent<Slider>();
@@ -26,13 +25,11 @@ public class MeshController : MonoBehaviour
             onValueChangeSlider();});
     }
 
+    /// <summary>
+    ///     Function for bleding mesh 
+    /// </summary>
     public void onValueChangeSlider() {
         skinnedMeshRendererGrid.SetBlendShapeWeight(0, slider.value * 100);
         planet.transform.localScale = (1.6f + (slider.value) * scaleB) * Vector3.one;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

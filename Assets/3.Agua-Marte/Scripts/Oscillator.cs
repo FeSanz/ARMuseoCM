@@ -15,6 +15,10 @@ public class Oscillator : MonoBehaviour
     private float posX = 0, posY = 0, posZ, angle = 0;
     private bool completada = false;
 
+    /// <summary>
+    ///     Funcion que mueve el satelite al rededor del planeta
+    /// </summary>
+    /// <returns></returns>
     void Update()
     {
         //Mientras no se hayan dado 3 vueltas el satélite sigue moviéndose
@@ -49,6 +53,10 @@ public class Oscillator : MonoBehaviour
         completada = false;
     }
 
+    /// <summary>
+    ///     Funcion que detiene la corrutina que muestra la imagen del agua
+    /// </summary>
+    /// <returns></returns>
     public void ParaCorrutina()
     {
         StopCoroutine(MuestraAgua());
