@@ -24,9 +24,9 @@ public class Oscillator : MonoBehaviour
         //Mientras no se hayan dado 3 vueltas el satélite sigue moviéndose
         if (!completada)
         {
-            posX = rotationCenter.position.x + Mathf.Cos(angle) * rotationRadius;
-            //posY = rotationCenter.position.y + Mathf.Sin(angle) * rotationRadius;
-            posZ = rotationCenter.position.z + Mathf.Sin(angle) * rotationRadius;
+            //posX = rotationCenter.transform.localPosition.x + Mathf.Cos(angle) * rotationRadius;
+            posY = rotationCenter.transform.localPosition.y + Mathf.Sin(angle) * rotationRadius;
+            posZ = rotationCenter.transform.localPosition.z + Mathf.Cos(angle) * rotationRadius;
 
             transform.localPosition = new Vector3(posX, posY, posZ);
             angle += Time.deltaTime * angularSpeed;
