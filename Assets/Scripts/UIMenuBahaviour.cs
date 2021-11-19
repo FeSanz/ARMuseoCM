@@ -14,9 +14,6 @@ public class UIMenuBahaviour : MonoBehaviour
     [SerializeField, Tooltip("GridLayout del menú de opciones")]
     private GridLayoutGroup _gridLayoutGroup;
 
-    [SerializeField, Tooltip("Animacion de alerta de permisos")]
-    private Animator AlertPermissionAnim;
-
     private void Awake()
     {
         foreach (string file in Directory.GetFiles("Assets", "Delete This File.txt", SearchOption.AllDirectories)) 
