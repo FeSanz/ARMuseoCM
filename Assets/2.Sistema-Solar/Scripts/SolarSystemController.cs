@@ -8,12 +8,9 @@ public class SolarSystemController : MonoBehaviour
 {
     [SerializeField, Tooltip("Animación del sistema solar")]
     private Animator animatorSolarSystem;
-    
-    //[SerializeField, Tooltip("Animación del panel informativo")]
-    //private Animator animatorInfoPanel;
 
     [SerializeField, Tooltip("Animación de la notificación")]
-    private GameObject notificación;
+    private GameObject notificacion;
 
     [SerializeField, Tooltip("Lista de planetas a mostrar individualmente")]
     private GameObject[] listPlanets;
@@ -27,10 +24,10 @@ public class SolarSystemController : MonoBehaviour
     /// <param name="idPlanetSelected">ID del planeta seleccionado</param>
     public void ActivePlanets(int idPlanetSelected) 
     {
-        if (notificación.activeInHierarchy)
+        if (notificacion.activeInHierarchy)
         {
-            notificación.GetComponent<Animator>().Play("Out");
-            notificación.SetActive(false);
+            notificacion.GetComponent<Animator>().Play("Out");
+            notificacion.SetActive(false);
         }
         switch (idPlanetSelected) {
             case 1:

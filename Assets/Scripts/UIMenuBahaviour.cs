@@ -76,56 +76,60 @@ public class UIMenuBahaviour : MonoBehaviour
     
     private IEnumerator AskForPermissions()
     {
-        List<bool> permissions = new List<bool>() { false, false, false, false };
-        List<bool> permissionsAsked = new List<bool>() { false, false, false, false };
-        List<Action> actions = new List<Action>()
-        {
-            new Action(() => {
-                permissions[0] = Permission.HasUserAuthorizedPermission(Permission.Microphone);
-                if (!permissions[0] && !permissionsAsked[0])
-                {
-                    Permission.RequestUserPermission(Permission.Microphone);
-                    permissionsAsked[0] = true;
-                    return;
-                }
-            }),
-            new Action(() => {
-                permissions[1] = Permission.HasUserAuthorizedPermission(Permission.Camera);
-                if (!permissions[1] && !permissionsAsked[1])
-                {
-                    Permission.RequestUserPermission(Permission.Camera);
-                    permissionsAsked[1] = true;
-                    return;
-                }
-            }),
-            new Action(() => {
-                permissions[2] = Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite);
-                if (!permissions[2] && !permissionsAsked[2])
-                {
-                    Permission.RequestUserPermission(Permission.ExternalStorageWrite);
-                    permissionsAsked[2] = true;
-                    return;
-                }
-            }),
-            new Action(() => {
-                permissions[3] = Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead);
-                if (!permissions[3] && !permissionsAsked[3])
-                {
-                    Permission.RequestUserPermission(Permission.ExternalStorageRead);
-                    permissionsAsked[3] = true;
-                    return;
-                }
-            })
-        };
-        for(int i = 0; i < permissionsAsked.Count; )
-        {
-            actions[i].Invoke();
-            if(permissions[i])
+        #if UNITY_ANDROID
+            List<bool> permissions = new List<bool>() { false, false, false, false };
+            List<bool> permissionsAsked = new List<bool>() { false, false, false, false };
+            List<Action> actions = new List<Action>()
             {
-                ++i;
+                new Action(() => {
+                    permissions[0] = Permission.HasUserAuthorizedPermission(Permission.Microphone);
+                    if (!permissions[0] && !permissionsAsked[0])
+                    {
+                        Permission.RequestUserPermission(Permission.Microphone);
+                        permissionsAsked[0] = true;
+                        return;
+                    }
+                }),
+                new Action(() => {
+                    permissions[1] = Permission.HasUserAuthorizedPermission(Permission.Camera);
+                    if (!permissions[1] && !permissionsAsked[1])
+                    {
+                        Permission.RequestUserPermission(Permission.Camera);
+                        permissionsAsked[1] = true;
+                        return;
+                    }
+                }),
+                new Action(() => {
+                    permissions[2] = Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite);
+                    if (!permissions[2] && !permissionsAsked[2])
+                    {
+                        Permission.RequestUserPermission(Permission.ExternalStorageWrite);
+                        permissionsAsked[2] = true;
+                        return;
+                    }
+                }),
+                new Action(() => {
+                    permissions[3] = Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead);
+                    if (!permissions[3] && !permissionsAsked[3])
+                    {
+                        Permission.RequestUserPermission(Permission.ExternalStorageRead);
+                        permissionsAsked[3] = true;
+                        return;
+                    }
+                })
+            };
+            for(int i = 0; i < permissionsAsked.Count; )
+            {
+                actions[i].Invoke();
+                if(permissions[i])
+                {
+                    ++i;
+                }
+                yield return new WaitForEndOfFrame();
             }
-            yield return new WaitForEndOfFrame();
-        }
+        #else
+            yield return null;
+        #endif
     }
 
     public void ExitOfApplication()
