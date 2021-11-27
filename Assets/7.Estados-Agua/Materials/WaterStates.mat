@@ -73,15 +73,15 @@ Material:
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
-    - _Depth: -2.43
-    - _Displacement: 14.09
+    - _Depth: -10.21
+    - _Displacement: 3
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _NormalStrength: 0.63
+    - _NormalStrength: 0.33
     - _OcclusionStrength: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
@@ -97,7 +97,7 @@ Material:
     - Tiling_XY: {r: 1, g: 1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DeepColor: {r: 0.7407885, g: 0.8752787, b: 0.8773585, a: 0.33333334}
+    - _DeepColor: {r: 0.29369885, g: 0.8148606, b: 0.8301887, a: 0.33333334}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowColor: {r: 0.33980063, g: 0.8479953, b: 0.8679245, a: 0.74509805}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
