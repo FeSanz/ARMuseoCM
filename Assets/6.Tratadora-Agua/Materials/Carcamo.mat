@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Carcamo
+  m_Shader: {fileID: -6465566751694194690, guid: 94bcabab2374fef4986705e97b184ac6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_20e28636de6d4b068c5bf6e154f2a67c: 0
+    - Vector1_377feeb281084693aaee15b80964b196: 0.4
+    - Vector1_3e54ccadcfc1494ba8da8eeefdab9110: 1
+    - Vector1_8b3390a792f64a58b42729c7d3459d8f: 0.12
+    - Vector1_9d1de0b2f072443782f75f4cd481a6d1: 4.35
+    - Vector1_c91e5c10326f45d9be16fff3e9ef1e7c: 0
+    - Vector1_c98276d67f214b5d955e652627d7b797: 10
+    - Vector1_de422f7a234c49129c4e5c1fe5bcb97c: 0.6
+    m_Colors:
+    - Color_8a2d28372b7b450f920e3fccaa4d8a2d: {r: 0.14012992, g: 0.45413753, b: 0.6320754, a: 1}
+    - Color_e8844b6b77a1428ca2ccf48cc32edcee: {r: 0.030660376, g: 0.034128346, b: 0.122641504, a: 1}
+    - Vector2_ae76d190397d4edbbca6bbd49681dbdc: {r: 0, g: 0.1, b: 0, a: 0}
+    - Vector2_c868d59c387341daa1799738a78f0acd: {r: 1.2, g: 0.6, b: 0, a: 0}
+    - Vector2_c98cbba84f7943a180bc6ccf62b57bd3: {r: 0, g: 0.2, b: 0, a: 0}
+  m_BuildTextureStacks: []
