@@ -8,10 +8,11 @@ public class MeshController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField, Tooltip("MeshSkin")]
-    private SkinnedMeshRenderer skinnedMeshRendererGrid;
+    private SkinnedMeshRenderer skinnedMeshRendererGrid1, skinnedMeshRendererGrid2,
+        skinnedMeshRendererGrid3, skinnedMeshRendererGrid4;
 
-    [SerializeField, Tooltip("Planet")]
-    private GameObject planet;
+    [SerializeField, Tooltip("Planets")]
+    private GameObject planet1, planet2, planet3, planet4;
 
     [SerializeField, Tooltip("Scale Planet")]
     private float scaleB = 1.2f;
@@ -29,7 +30,13 @@ public class MeshController : MonoBehaviour
     ///     Function for bleding mesh 
     /// </summary>
     public void onValueChangeSlider() {
-        skinnedMeshRendererGrid.SetBlendShapeWeight(0, slider.value * 100);
-        planet.transform.localScale = (1.6f + (slider.value) * scaleB) * Vector3.one;
+        skinnedMeshRendererGrid1.SetBlendShapeWeight(0, slider.value * 120);
+        skinnedMeshRendererGrid2.SetBlendShapeWeight(0, slider.value * 90);
+        skinnedMeshRendererGrid3.SetBlendShapeWeight(0, slider.value * 60);
+        skinnedMeshRendererGrid4.SetBlendShapeWeight(0, slider.value * 30);
+        planet1.transform.localScale = (2f + (slider.value) * scaleB) * Vector3.one;
+        planet2.transform.localScale = (1.5f + (slider.value) * scaleB) * Vector3.one;
+        planet3.transform.localScale = (1f + (slider.value) * scaleB) * Vector3.one;
+        planet4.transform.localScale = (0.5f + (slider.value) * scaleB) * Vector3.one;
     }
 }
