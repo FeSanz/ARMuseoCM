@@ -2,21 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 [RequireComponent(typeof(Slider))]
 public class MeshController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField, Tooltip("MeshSkin")]
-    private SkinnedMeshRenderer skinnedMeshRendererGrid1, skinnedMeshRendererGrid2,
-        skinnedMeshRendererGrid3, skinnedMeshRendererGrid4;
+    private SkinnedMeshRenderer skinnedMeshRendererGrid;
 
     [SerializeField, Tooltip("Planets")]
-    private GameObject planet1, planet2, planet3, planet4;
+    private GameObject[] planets;
+    public float[] diameters;
 
     [SerializeField, Tooltip("Scale Planet")]
     private float scaleB = 1.2f;
-
+     
     private Slider slider;
     
     void Start()
@@ -24,19 +25,21 @@ public class MeshController : MonoBehaviour
         slider = GetComponent<Slider>();
         slider.onValueChanged.AddListener( delegate {
             onValueChangeSlider();});
+
+        for (int i=0; i<planets.Length; i++)
+        {
+            diameters[i] = planets[i].transform.localScale.x;
+        }
     }
 
     /// <summary>
     ///     Function for bleding mesh 
     /// </summary>
     public void onValueChangeSlider() {
-        skinnedMeshRendererGrid1.SetBlendShapeWeight(0, slider.value * 120);
-        skinnedMeshRendererGrid2.SetBlendShapeWeight(0, slider.value * 90);
-        skinnedMeshRendererGrid3.SetBlendShapeWeight(0, slider.value * 60);
-        skinnedMeshRendererGrid4.SetBlendShapeWeight(0, slider.value * 30);
-        planet1.transform.localScale = (2f + (slider.value) * scaleB) * Vector3.one;
-        planet2.transform.localScale = (1.5f + (slider.value) * scaleB) * Vector3.one;
-        planet3.transform.localScale = (1f + (slider.value) * scaleB) * Vector3.one;
-        planet4.transform.localScale = (0.5f + (slider.value) * scaleB) * Vector3.one;
+        skinnedMeshRendererGrid.SetBlendShapeWeight(0, slider.value * 120);
+
+        for (int i=0; i<planets.Length; i++) {
+            planets[i].transform.localScale = ( diameters[i] + (slider.value) * scaleB) * Vector3.one;
+        }
     }
 }
