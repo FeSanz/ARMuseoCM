@@ -7,10 +7,19 @@ public class RotationPlanet : MonoBehaviour
 {
     [SerializeField, Tooltip("Velocidad de rotacion")]
     private float speed = 20.0f;
-
+    
+    [SerializeField, Tooltip("Velocidad de rotacion")]
+    private bool FlipRotation = false;
     void Update()
     {
-        transform.RotateAround (transform.position, Vector3.up ,  speed * Time.deltaTime );
-        //transform.localRotation = Quaternion.Euler(0,0, speed * Time.deltaTime);
+        if (FlipRotation)
+        {
+            transform.RotateAround (transform.position, Vector3.down ,  speed * Time.deltaTime );
+        }
+        else
+        {
+            transform.RotateAround (transform.position, Vector3.up ,  speed * Time.deltaTime );
+        }
+   
     }
 }
