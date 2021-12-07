@@ -123,35 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &3761574
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'target_mcmMaterial
-
-    21492'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b26fbe992a0b51145b2137233e3a8583, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &17545974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,6 +1219,7 @@ GameObject:
   - component: {fileID: 676415858}
   - component: {fileID: 676415860}
   - component: {fileID: 676415859}
+  - component: {fileID: 676415861}
   m_Layer: 0
   m_Name: Neptuno
   m_TagString: Untagged
@@ -1264,7 +1236,7 @@ Transform:
   m_GameObject: {fileID: 676415857}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -42.4, y: 34.8, z: -15}
-  m_LocalScale: {x: 6.29578, y: 6.29578, z: 6.29578}
+  m_LocalScale: {x: 5.7, y: 5.7, z: 5.7}
   m_Children: []
   m_Father: {fileID: 1177159634}
   m_RootOrder: 7
@@ -1318,6 +1290,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676415857}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &676415861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676415857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e29113174577b4bbecc21d49fdbd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeta: {fileID: 676415857}
+  velocidadX: 0
+  velocidadY: 40
+  velocidadZ: 0
+  wise: 0
 --- !u!1 &698325739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1459,7 @@ GameObject:
   - component: {fileID: 944751835}
   - component: {fileID: 944751837}
   - component: {fileID: 944751836}
+  - component: {fileID: 944751838}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -1486,7 +1476,7 @@ Transform:
   m_GameObject: {fileID: 944751834}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: -15.100002, y: 34, z: -15}
-  m_LocalScale: {x: 4.88647, y: 4.88647, z: 4.88647}
+  m_LocalScale: {x: 4.3, y: 4.3, z: 4.3}
   m_Children: []
   m_Father: {fileID: 1177159634}
   m_RootOrder: 4
@@ -1540,6 +1530,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944751834}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &944751838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944751834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e29113174577b4bbecc21d49fdbd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeta: {fileID: 944751834}
+  velocidadX: 0
+  velocidadY: 0
+  velocidadZ: 40
+  wise: 1
 --- !u!1 &1070993642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,6 +1558,7 @@ GameObject:
   - component: {fileID: 1070993643}
   - component: {fileID: 1070993645}
   - component: {fileID: 1070993644}
+  - component: {fileID: 1070993646}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -1567,7 +1575,7 @@ Transform:
   m_GameObject: {fileID: 1070993642}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: 15.1, y: 23.29, z: -15}
-  m_LocalScale: {x: 4.459398, y: 4.459398, z: 4.459398}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 1177159634}
   m_RootOrder: 5
@@ -1621,6 +1629,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070993642}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1070993646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070993642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e29113174577b4bbecc21d49fdbd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeta: {fileID: 1070993642}
+  velocidadX: 0
+  velocidadY: 0
+  velocidadZ: 40
+  wise: 0
 --- !u!1 &1082648648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,7 +2087,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3761574}
+  - {fileID: 1274526841}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2333,6 +2358,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206465774}
   m_CullTransparentMesh: 0
+--- !u!21 &1274526841
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'target_mcmMaterial
+
+    21494'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b26fbe992a0b51145b2137233e3a8583, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1308349959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2647,7 @@ GameObject:
   - component: {fileID: 1472040034}
   - component: {fileID: 1472040036}
   - component: {fileID: 1472040035}
+  - component: {fileID: 1472040037}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -2609,7 +2664,7 @@ Transform:
   m_GameObject: {fileID: 1472040033}
   m_LocalRotation: {x: -0, y: 0.64694077, z: 0.7625403, w: 0}
   m_LocalPosition: {x: 21, y: 71.5, z: -15}
-  m_LocalScale: {x: 9.522325, y: 9.522325, z: 9.522325}
+  m_LocalScale: {x: 9, y: 9, z: 9}
   m_Children: []
   m_Father: {fileID: 1177159634}
   m_RootOrder: 6
@@ -2663,6 +2718,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472040033}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1472040037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472040033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e29113174577b4bbecc21d49fdbd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeta: {fileID: 1472040033}
+  velocidadX: 0
+  velocidadY: 40
+  velocidadZ: 0
+  wise: 0
 --- !u!1 &1498973403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2674,6 +2746,7 @@ GameObject:
   - component: {fileID: 1498973404}
   - component: {fileID: 1498973406}
   - component: {fileID: 1498973405}
+  - component: {fileID: 1498973407}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -2690,7 +2763,7 @@ Transform:
   m_GameObject: {fileID: 1498973403}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
   m_LocalPosition: {x: -10.98, y: 48.33, z: -15}
-  m_LocalScale: {x: 2.5839639, y: 2.5839639, z: 2.5839639}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1177159634}
   m_RootOrder: 3
@@ -2744,6 +2817,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1498973403}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1498973407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498973403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e29113174577b4bbecc21d49fdbd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeta: {fileID: 1498973403}
+  velocidadX: 0
+  velocidadY: 0
+  velocidadZ: 40
+  wise: 0
 --- !u!1 &1525681125
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3181,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  scaleB: 2
+  scaleB: 1.5
 --- !u!1 &1759908848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3825,6 +3915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1163292305477877203}
   - component: {fileID: 1163292305477877200}
+  - component: {fileID: 1163292305477876784}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -3832,6 +3923,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1163292305477876784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163292305477876783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e29113174577b4bbecc21d49fdbd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeta: {fileID: 1163292305477876783}
+  velocidadX: 0
+  velocidadY: 0
+  velocidadZ: 40
+  wise: 0
 --- !u!33 &1163292305477877200
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3849,7 +3957,7 @@ Transform:
   m_GameObject: {fileID: 1163292305477876783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 30.3, y: 41.4, z: -15}
-  m_LocalScale: {x: 2.308152, y: 2.3081503, z: 2.3081508}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 5121374475565265455}
   - {fileID: 2795745878660654277}
@@ -15848,6 +15956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6732373712003192543}
+  - component: {fileID: 6732373712003192540}
   m_Layer: 0
   m_Name: Urano
   m_TagString: Untagged
@@ -15855,6 +15964,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6732373712003192540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732373712003192539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e29113174577b4bbecc21d49fdbd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeta: {fileID: 6732373712003192539}
+  velocidadX: 0
+  velocidadY: 0
+  velocidadZ: 40
+  wise: 1
 --- !u!4 &6732373712003192543
 Transform:
   m_ObjectHideFlags: 0
@@ -15864,7 +15990,7 @@ Transform:
   m_GameObject: {fileID: 6732373712003192539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -33.9, y: 64.08, z: -15}
-  m_LocalScale: {x: 1.8224361, y: 1.8224349, z: 1.8224351}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 6411166234804324462}
   - {fileID: 6411166234804242346}
@@ -16114,7 +16240,7 @@ Transform:
   m_GameObject: {fileID: 7587120536806713922}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.35, y: 43.6, z: -15}
-  m_LocalScale: {x: 15.057542, y: 15.057542, z: 15.057542}
+  m_LocalScale: {x: 14.5, y: 14.5, z: 14.5}
   m_Children:
   - {fileID: 7513869642600306380}
   m_Father: {fileID: 1177159634}
@@ -16261,7 +16387,7 @@ Transform:
   m_GameObject: {fileID: 8616026848961802063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.14, y: 63.7, z: -15}
-  m_LocalScale: {x: 1.1947466, y: 1.1947464, z: 1.1947464}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4854983612769504785}
   - {fileID: 4854983612769538283}
@@ -16279,6 +16405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8616026848961802059}
   - component: {fileID: 8616026848961802056}
+  - component: {fileID: 8616026848961802064}
   m_Layer: 0
   m_Name: Earth
   m_TagString: Untagged
@@ -16286,6 +16413,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8616026848961802064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616026848961802063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e29113174577b4bbecc21d49fdbd08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeta: {fileID: 8616026848961802063}
+  velocidadX: 0
+  velocidadY: 0
+  velocidadZ: 40
+  wise: 0
 --- !u!114 &9145357499306541312
 MonoBehaviour:
   m_ObjectHideFlags: 0
