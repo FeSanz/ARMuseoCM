@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0a9333c212b2baa45a6c0f756604b210
+guid: 7e18a1a735b7e91419dabc502a870db1
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -14,5 +14,5 @@ VideoClipImporter:
   importAudio: 1
   targetSettings: {}
   userData: 
-  assetBundleName: microscopio_vid
+  assetBundleName: 
   assetBundleVariant: 
