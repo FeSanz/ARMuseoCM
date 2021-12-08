@@ -7,15 +7,41 @@ public class LagosRiosController : MonoBehaviour
 {
     public GameObject[] modelosArray;
     private int numAumento = 1;
-    [SerializeField, Tooltip("Boton para avanzar")] Button aumentoBtn;
-    [SerializeField, Tooltip("Boton para retroceder")] Button disminuirBtn;
+    [SerializeField, Tooltip("Boton para avanzar")] private Button aumentoBtn;
+    [SerializeField, Tooltip("Boton para retroceder")] private Button disminuirBtn;
+    [SerializeField, Tooltip("Notificación tipo SnackBar")] private GameObject SnackBar;
 
     void Start()
     {
         disminuirBtn.interactable = false;
         //modelosArray[0].GetComponent<AudioSource>().Play();
     }
+    private void Update()
+    {
+        if (AudioSettings.Mobile.muteState)
+        {
+            SnackBar.SetActive(true);
+        }
+        else
+        {
+            SnackBar.SetActive(false);
+        }
+    }
+    public void MuteAudio()
+    {
+        foreach (GameObject audio in modelosArray)
+        {
+            audio.GetComponent<AudioSource>().mute = true;
+        }
+    }
 
+    public void SpeakAudio()
+    {
+        foreach (GameObject audio in modelosArray)
+        {
+            audio.GetComponent<AudioSource>().mute = false;
+        }
+    }
     /// <summary>
     /// Funcion para avanzar (cambiar modelo de rios o lagos)
     /// </summary>
