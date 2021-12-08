@@ -1,45 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
-[RequireComponent(typeof(Slider))]
 public class MeshController : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField, Tooltip("MeshSkin")]
     private SkinnedMeshRenderer skinnedMeshRendererGrid;
 
-    [SerializeField, Tooltip("Planets")]
-    private GameObject[] planets;
-    public float[] diameters;
-
-    [SerializeField, Tooltip("Scale Planet")]
-    private float scaleB = 1.2f;
-     
+    [SerializeField, Tooltip("Slider masa")] 
     private Slider slider;
-    
+
+
+    private float _zValue;
     void Start()
     {
-        slider = GetComponent<Slider>();
-        slider.onValueChanged.AddListener( delegate {
-            onValueChangeSlider();});
-
-        for (int i=0; i<planets.Length; i++)
-        {
-            diameters[i] = planets[i].transform.localScale.x;
-        }
+        _zValue = transform.localPosition.z; //-13.5
     }
 
     /// <summary>
-    ///     Function for bleding mesh 
+    /// Function for bleding mesh 
     /// </summary>
-    public void onValueChangeSlider() {
-        skinnedMeshRendererGrid.SetBlendShapeWeight(0, slider.value * 120);
+    public void onValueChangeSlider()
+    {
+        skinnedMeshRendererGrid.SetBlendShapeWeight(0, slider.value * 20);
+        transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, _zValue - slider.value);
+        //Planets.transform.localScale = Vector3.one * 1.2f;
 
-        for (int i=0; i<planets.Length; i++) {
-            planets[i].transform.localScale = ( diameters[i] + (slider.value) * scaleB) * Vector3.one;
-        }
     }
 }
