@@ -10,9 +10,6 @@ public class RotateScale : MonoBehaviour
     
     [SerializeField, Tooltip("Velocidad de rotacion")]
     private bool FlipRotation = false;
-
-    [SerializeField, Tooltip("Slider")] 
-    private Slider Slider;
     void Update()
     {
         if (FlipRotation)
@@ -23,7 +20,5 @@ public class RotateScale : MonoBehaviour
         {
             transform.Rotate( Vector3.up ,  speed * Time.deltaTime );
         }
-        
-        print(Slider.value);
     }
 }
