@@ -13,6 +13,7 @@ public class LagosRiosController : MonoBehaviour
     void Start()
     {
         disminuirBtn.interactable = false;
+        //modelosArray[0].GetComponent<AudioSource>().Play();
     }
 
     /// <summary>
@@ -27,6 +28,7 @@ public class LagosRiosController : MonoBehaviour
             modelosArray[numAumento - 1].SetActive(true);
             disminuirBtn.interactable = true;
         }
+        PlayAudio();
         if(numAumento == modelosArray.Length)
         {
             aumentoBtn.interactable = false;
@@ -45,6 +47,7 @@ public class LagosRiosController : MonoBehaviour
             modelosArray[numAumento - 1].SetActive(true);
             aumentoBtn.interactable = true;
         }
+        PlayAudio();
         if (numAumento == 1)
         {
             disminuirBtn.interactable = false;
@@ -57,5 +60,14 @@ public class LagosRiosController : MonoBehaviour
         {
             model.SetActive(false);
         }
+    }
+
+    public void PauseAudio()
+    {
+        modelosArray[numAumento - 1].GetComponent<AudioSource>().Pause();
+    }
+    public void PlayAudio()
+    {
+        modelosArray[numAumento - 1].GetComponent<AudioSource>().Play();
     }
 }
