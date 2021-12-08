@@ -14,11 +14,11 @@ public class RotationPlanet : MonoBehaviour
     {
         if (FlipRotation)
         {
-            transform.RotateAround (transform.position, Vector3.down ,  speed * Time.deltaTime );
+            transform.Rotate(Vector3.down ,  speed * Time.deltaTime );
         }
         else
         {
-            transform.RotateAround (transform.position, Vector3.up ,  speed * Time.deltaTime );
+            transform.Rotate( Vector3.up ,  speed * Time.deltaTime );
         }
    
     }
