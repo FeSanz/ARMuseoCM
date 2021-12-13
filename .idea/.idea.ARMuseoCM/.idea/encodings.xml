@@ -2,7 +2,7 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
     <file url="file://$PROJECT_DIR$/Assets/2.Sistema-Solar/Scrips/SolarSystemController.cs" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/Assets/2.Sistema-Solar/Scripts/SolarSystemController.cs" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/Assets/2.Sistema-Solar/Scripts/SolarSystemController.cs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Assets/3.Agua-Marte/Scripts/Oscillator.cs" charset="windows-1252" />
   </component>
 </project>

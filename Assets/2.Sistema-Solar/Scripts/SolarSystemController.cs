@@ -6,20 +6,20 @@ using System.Linq;
 
 public class SolarSystemController : MonoBehaviour
 {
-    [SerializeField, Tooltip("Animación del sistema solar")]
+    [SerializeField, Tooltip("AnimaciÃ³n del sistema solar")]
     private Animator animatorSolarSystem;
 
-    [SerializeField, Tooltip("Animación de la notificación")]
+    [SerializeField, Tooltip("AnimaciÃ³n de la notificaciÃ³n")]
     private GameObject notificacion;
 
     [SerializeField, Tooltip("Lista de planetas a mostrar individualmente")]
     private GameObject[] listPlanets;
     
-    [SerializeField, Tooltip("Titulo, Descripcion, Días, Años, Temperatura, Medidas")]
+    [SerializeField, Tooltip("Titulo, Descripcion, DÃ­as, AÃ±os, Temperatura, Medidas")]
     private TextMeshProUGUI[] textData;
 
     /// <summary>
-    /// Se activa al seleccionar un planeta para mostrar la descripción del mismo
+    /// Se activa al seleccionar un planeta para mostrar la descripciÃ³n del mismo
     /// </summary>
     /// <param name="idPlanetSelected">ID del planeta seleccionado</param>
     public void ActivePlanets(int idPlanetSelected) 
@@ -32,84 +32,84 @@ public class SolarSystemController : MonoBehaviour
         switch (idPlanetSelected) {
             case 1:
                 PlanetSelectedData( idPlanetSelected, "MERCURIO", 
-                    "Es el planeta más pequeño del sistema solar y el más cercano al Sol",
-                    "* Su rotación dura 58.7 días", "* Su traslación dura 88 días",
-                    "* Máxima 427 °C \n* Mínima -183 °C","* Diámetro de \n4,879.4 km",
+                    "Es el planeta mÃ¡s pequeÃ±o del sistema solar y el mÃ¡s cercano al Sol",
+                    "* Su rotaciÃ³n dura 58.7 dÃ­as", "* Su traslaciÃ³n dura 88 dÃ­as",
+                    "* MÃ¡xima 427 Â°C \n* MÃ­nima -183 Â°C","* DiÃ¡metro de \n4,879.4 km",
                     "* Distancia al sol\n57.91,000,000 km"
                     );
                 break;
             case 2:
                 PlanetSelectedData( idPlanetSelected, "VENUS", 
-                    "Es el segundo planeta más cercano al Sol, su atmosfera está compuesta por dióxido de carbono",
-                    "* Su rotación dura 243,018.7 días", "* Su traslación dura 225 días",
-                    "* Máxima 499.85 °C \n? Mínima -45.15  °C","* Diámetro de \n12, 103.6 km",
+                    "Es el segundo planeta mÃ¡s cercano al Sol, su atmosfera estÃ¡ compuesta por diÃ³xido de carbono",
+                    "* Su rotaciÃ³n dura 243,018.7 dÃ­as", "* Su traslaciÃ³n dura 225 dÃ­as",
+                    "* MÃ¡xima 499.85 Â°C \n? MÃ­nima -45.15  Â°C","* DiÃ¡metro de \n12, 103.6 km",
                     "* Distancia al sol\n108.2, 000, 000 km"
                 );
                 break;
             case 3:
                 PlanetSelectedData( idPlanetSelected, "TIERRA", 
-                    "Es el planeta más denso y uno de los más grande de los planetas rocosos, su atmosfera está compuesta mayormente de nitrógeno y oxígeno",
-                    "* Su rotación dura 23h 56m 4.100s", "* Su traslación 365.25 días",
-                    "* Máxima 56.7 °C \n* Mínima -89.15 °C","* Diámetro de \n12,742 km",
+                    "Es el planeta mÃ¡s denso y uno de los mÃ¡s grande de los planetas rocosos, su atmosfera estÃ¡ compuesta mayormente de nitrÃ³geno y oxÃ­geno",
+                    "* Su rotaciÃ³n dura 23h 56m 4.100s", "* Su traslaciÃ³n 365.25 dÃ­as",
+                    "* MÃ¡xima 56.7 Â°C \n* MÃ­nima -89.15 Â°C","* DiÃ¡metro de \n12,742 km",
                     "* Distancia al sol\n149.6,000,000 km"
                 );
                 break;
             case 4:
                 PlanetSelectedData( idPlanetSelected, "MARTE", 
-                    "Es conocido como el planeta rojo debido al óxido de hierro, predominante en su superficie",
-                    "* Su rotación dura 24.6229 horas", "* Su traslación dura 687 días",
-                    "* Máxima 20 °C \n* Mínima -87 °C","* Diámetro de \n679.4 km",
+                    "Es conocido como el planeta rojo debido al Ã³xido de hierro, predominante en su superficie",
+                    "* Su rotaciÃ³n dura 24.6229 horas", "* Su traslaciÃ³n dura 687 dÃ­as",
+                    "* MÃ¡xima 20 Â°C \n* MÃ­nima -87 Â°C","* DiÃ¡metro de \n679.4 km",
                     "* Distancia al sol\n227.9, 000, 000 km"
                 );
                 break;
             case 5:
-                PlanetSelectedData( idPlanetSelected, "JÚPITER", 
-                    "Es el planeta más grande del sistema solar, y el primer planeta gigante gaseoso, es uno de los más brillantes en cielo nocturno",
-                    "* Su rotación dura 9h 55m 30s", "* Su traslación dura 12 años",
-                    "* Máxima -75.15 °C \n* Mínima -163.15 °C","* Diámetro de \n142,984 km",
+                PlanetSelectedData( idPlanetSelected, "JÃšPITER", 
+                    "Es el planeta mÃ¡s grande del sistema solar, y el primer planeta gigante gaseoso, es uno de los mÃ¡s brillantes en cielo nocturno",
+                    "* Su rotaciÃ³n dura 9h 55m 30s", "* Su traslaciÃ³n dura 12 aÃ±os",
+                    "* MÃ¡xima -75.15 Â°C \n* MÃ­nima -163.15 Â°C","* DiÃ¡metro de \n142,984 km",
                     "* Distancia al sol\n778.5,000,000 km"
                 );
                 break;
             case 6:
                 PlanetSelectedData( idPlanetSelected, "SATURNO", 
-                    "Es el único planeta con un sistema de anillos de hielo y roca visibles desde la Tierra",
-                    "* Su rotación dura 10h 33m 38s", "* Su traslación dura 30 años",
-                    "* Máxima -73° °C \n* Mínima -191.15 °C","* Diámetro de \n120,536 km",
+                    "Es el Ãºnico planeta con un sistema de anillos de hielo y roca visibles desde la Tierra",
+                    "* Su rotaciÃ³n dura 10h 33m 38s", "* Su traslaciÃ³n dura 30 aÃ±os",
+                    "* MÃ¡xima -73Â° Â°C \n* MÃ­nima -191.15 Â°C","* DiÃ¡metro de \n120,536 km",
                     "* Distancia al sol\n1,434 miles de millones de km"
                 );
                 break;
             case 7:
                 PlanetSelectedData( idPlanetSelected, "URANO", 
                     " Es uno de los primeros planetas descubiertos por medio de un telescopio, tiene anillos tenues",
-                    "* Su rotación dura 17h 14m", "* Su traslación dura 84 años",
-                    "* Máxima -218.2 °C \n* Mínima -214.2 °C","* Diámetro de \n51.118km",
+                    "* Su rotaciÃ³n dura 17h 14m", "* Su traslaciÃ³n dura 84 aÃ±os",
+                    "* MÃ¡xima -218.2 Â°C \n* MÃ­nima -214.2 Â°C","* DiÃ¡metro de \n51.118km",
                     "* Distancia al sol\n2,871 miles de millones de km"
                 );
                 break;
             case 8:
                 PlanetSelectedData( idPlanetSelected, "NEPTUNO", 
-                    "Es denominado gigante helado debido a su lejanía con el sol, su atmósfera se compone de hidrógeno, helio y metano, es oscuro, frío y muy ventoso.",
-                    "* Su rotación dura 16h 6m 14s", "* Su traslación dura 165 años",
-                    "* Máxima -217.15 °C \n* Mínima -223 °C","* Diámetro de \n49.572 km",
+                    "Es denominado gigante helado debido a su lejanÃ­a con el sol, su atmÃ³sfera se compone de hidrÃ³geno, helio y metano, es oscuro, frÃ­o y muy ventoso.",
+                    "* Su rotaciÃ³n dura 16h 6m 14s", "* Su traslaciÃ³n dura 165 aÃ±os",
+                    "* MÃ¡xima -217.15 Â°C \n* MÃ­nima -223 Â°C","* DiÃ¡metro de \n49.572 km",
                     "* Distancia al sol\n4,495 miles de millones de km"
                 );
                 break;
             case 9:
                 PlanetSelectedData( idPlanetSelected, "SOL", 
-                    "Estrella que se formó hace 5000 millones de años, su luz da vida, calor y mantiene unido el sistema solar",
-                    "* Su rotación dura 609 horas", "* Su traslación dura 225 millones de años en la Vía Láctea",
-                    "* Temperatura del nucleo\n16,000,000 °C","* Diámetro de \n1,392.000 km",
-                    "* Diámetro en el centro\n8.4m"
+                    "Estrella que se formÃ³ hace 5000 millones de aÃ±os, su luz da vida, calor y mantiene unido el sistema solar",
+                    "* Su rotaciÃ³n dura 609 horas", "* Su traslaciÃ³n dura 225 millones de aÃ±os en la VÃ­a LÃ¡ctea",
+                    "* Temperatura del nucleo\n16,000,000 Â°C","* DiÃ¡metro de \n1,392.000 km",
+                    "* DiÃ¡metro en el centro\n8.4m"
                 );
                 break;
             default:
-                Debug.LogWarning("Opción no encontrada");
+                Debug.LogWarning("OpciÃ³n no encontrada");
                 break;
         }
     }
 
     /// <summary>
-    /// Llena el panel de información de acuerdo al planeta seleccionado
+    /// Llena el panel de informaciÃ³n de acuerdo al planeta seleccionado
     /// </summary>
     /// <param name="idPlanet"></param>
     /// <param name="name"></param>
