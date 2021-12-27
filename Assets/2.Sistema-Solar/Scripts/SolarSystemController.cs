@@ -35,31 +35,31 @@ public class SolarSystemController : MonoBehaviour
                     "Es el planeta más pequeño del sistema solar y el más cercano al Sol",
                     "* Su rotación dura 58.7 días", "* Su traslación dura 88 días",
                     "* Máxima 427 °C \n* Mínima -183 °C","* Diámetro de \n4,879.4 km",
-                    "* Distancia al sol\n57.91,000,000 km"
+                    "* Distancia al sol\n57,910,000 km"
                     );
                 break;
             case 2:
                 PlanetSelectedData( idPlanetSelected, "VENUS", 
                     "Es el segundo planeta más cercano al Sol, su atmosfera está compuesta por dióxido de carbono",
                     "* Su rotación dura 243,018.7 días", "* Su traslación dura 225 días",
-                    "* Máxima 499.85 °C \n? Mínima -45.15  °C","* Diámetro de \n12, 103.6 km",
-                    "* Distancia al sol\n108.2, 000, 000 km"
+                    "* Máxima 499.85 °C \n* Mínima -45.15  °C","* Diámetro de \n12,103.6 km",
+                    "* Distancia al sol\n108,200,000 km"
                 );
                 break;
             case 3:
                 PlanetSelectedData( idPlanetSelected, "TIERRA", 
-                    "Es el planeta más denso y uno de los más grande de los planetas rocosos, su atmosfera está compuesta mayormente de nitrógeno y oxígeno",
+                    "Es el planeta más denso y uno de los más grandes de los planetas rocosos, su atmosfera está compuesta mayormente de nitrógeno y oxígeno",
                     "* Su rotación dura 23h 56m 4.100s", "* Su traslación 365.25 días",
                     "* Máxima 56.7 °C \n* Mínima -89.15 °C","* Diámetro de \n12,742 km",
-                    "* Distancia al sol\n149.6,000,000 km"
+                    "* Distancia al sol\n149,600,000 km"
                 );
                 break;
             case 4:
                 PlanetSelectedData( idPlanetSelected, "MARTE", 
                     "Es conocido como el planeta rojo debido al óxido de hierro, predominante en su superficie",
                     "* Su rotación dura 24.6229 horas", "* Su traslación dura 687 días",
-                    "* Máxima 20 °C \n* Mínima -87 °C","* Diámetro de \n679.4 km",
-                    "* Distancia al sol\n227.9, 000, 000 km"
+                    "* Máxima 20 °C \n* Mínima -87 °C","* Diámetro de \n6,794 km",
+                    "* Distancia al sol\n227,900,000 km"
                 );
                 break;
             case 5:
@@ -67,39 +67,39 @@ public class SolarSystemController : MonoBehaviour
                     "Es el planeta más grande del sistema solar, y el primer planeta gigante gaseoso, es uno de los más brillantes en cielo nocturno",
                     "* Su rotación dura 9h 55m 30s", "* Su traslación dura 12 años",
                     "* Máxima -75.15 °C \n* Mínima -163.15 °C","* Diámetro de \n142,984 km",
-                    "* Distancia al sol\n778.5,000,000 km"
+                    "* Distancia al sol\n778,330,000 km"
                 );
                 break;
             case 6:
                 PlanetSelectedData( idPlanetSelected, "SATURNO", 
                     "Es el único planeta con un sistema de anillos de hielo y roca visibles desde la Tierra",
                     "* Su rotación dura 10h 33m 38s", "* Su traslación dura 30 años",
-                    "* Máxima -73° °C \n* Mínima -191.15 °C","* Diámetro de \n120,536 km",
-                    "* Distancia al sol\n1,434 miles de millones de km"
+                    "* Máxima -73° °C \n* Mínima -191.15 °C","* Diámetro de \n108,728 km",
+                    "* Distancia al sol\n1,429,400,000 km"
                 );
                 break;
             case 7:
                 PlanetSelectedData( idPlanetSelected, "URANO", 
                     " Es uno de los primeros planetas descubiertos por medio de un telescopio, tiene anillos tenues",
                     "* Su rotación dura 17h 14m", "* Su traslación dura 84 años",
-                    "* Máxima -218.2 °C \n* Mínima -214.2 °C","* Diámetro de \n51.118km",
-                    "* Distancia al sol\n2,871 miles de millones de km"
+                    "* Máxima -218.2 °C \n* Mínima -214.2 °C","* Diámetro de \n51,118 km",
+                    "* Distancia al sol\n2,870,990,000 km"
                 );
                 break;
             case 8:
                 PlanetSelectedData( idPlanetSelected, "NEPTUNO", 
                     "Es denominado gigante helado debido a su lejanía con el sol, su atmósfera se compone de hidrógeno, helio y metano, es oscuro, frío y muy ventoso.",
                     "* Su rotación dura 16h 6m 14s", "* Su traslación dura 165 años",
-                    "* Máxima -217.15 °C \n* Mínima -223 °C","* Diámetro de \n49.572 km",
-                    "* Distancia al sol\n4,495 miles de millones de km"
+                    "* Máxima -217.15 °C \n* Mínima -223 °C","* Diámetro de \n49,532 km",
+                    "* Distancia al sol\n4,504,300,000 km"
                 );
                 break;
             case 9:
                 PlanetSelectedData( idPlanetSelected, "SOL", 
                     "Estrella que se formó hace 5000 millones de años, su luz da vida, calor y mantiene unido el sistema solar",
                     "* Su rotación dura 609 horas", "* Su traslación dura 225 millones de años en la Vía Láctea",
-                    "* Temperatura del nucleo\n16,000,000 °C","* Diámetro de \n1,392.000 km",
-                    "* Diámetro en el centro\n8.4m"
+                    "* Temperatura del nucleo\n16,000,000 °C","* Diámetro de \n1,392,000 km",
+                    "* Radio \n696,340 km"
                 );
                 break;
             default:
