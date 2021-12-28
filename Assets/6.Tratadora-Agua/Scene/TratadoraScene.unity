@@ -16602,8 +16602,6 @@ GameObject:
   - component: {fileID: 425904646}
   - component: {fileID: 425904651}
   - component: {fileID: 425904650}
-  - component: {fileID: 425904649}
-  - component: {fileID: 425904647}
   - component: {fileID: 425904648}
   m_Layer: 0
   m_Name: TagNum
@@ -16632,38 +16630,6 @@ RectTransform:
   m_AnchoredPosition: {x: 18.71, y: 1.2}
   m_SizeDelta: {x: 138.0217, y: 138.0217}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &425904647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425904645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885689023277ea9489c5515d25b837ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aumentoTxt: {fileID: 697769332}
-  descripcionTxt: {fileID: 0}
-  videoPlayer: {fileID: 0}
-  videosArray:
-  - {fileID: 32900000, guid: 9ec6d440f56648a479e89c20f54e12d7, type: 3}
-  - {fileID: 32900000, guid: 9b676801a52c21f4196a839f7d1bf98d, type: 3}
-  - {fileID: 32900000, guid: 209490ad036dbe04cb30b09dc8f3ed7e, type: 3}
-  - {fileID: 32900000, guid: 7e18a1a735b7e91419dabc502a870db1, type: 3}
-  descripcionArray:
-  - "El agua tambi\xE9n es importante para el desarrollo larvario de algunas especies
-    como la lib\xE9lula."
-  - "Cuando el agua se queda estancada por mucho tiempo, se acumulan hongos microsc\xF3picos
-    que en conjunto con las algas se genera lo que llamamos \u201Clama\u201D, o tambi\xE9n
-    conocido como musgo microsc\xF3pico."
-  - "Las diatomeas son organismos unicelulares que ocupan algunas propiedades qu\xEDmicas
-    del agua para realizar procesos como reproducci\xF3n y alimentaci\xF3n."
-  - En el agua potable encontramos bacterias que, sin saberlo, las ingerimos generando
-    enfermedades  gastrointestinales.
-  aumentoBtn: {fileID: 0}
-  disminuirBtn: {fileID: 0}
 --- !u!114 &425904648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16710,32 +16676,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
---- !u!114 &425904649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425904645}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!114 &425904650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16765,7 +16705,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.08
+  m_PixelsPerUnitMultiplier: 1.1
 --- !u!222 &425904651
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17469,7 +17409,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482713333}
-  m_Mesh: {fileID: 981201306}
+  m_Mesh: {fileID: 1084425680}
 --- !u!23 &482713336
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17489,7 +17429,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1155080453}
+  - {fileID: 1871785649}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59455,170 +59395,6 @@ Transform:
   m_Father: {fileID: 96415279}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &981201306
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh24874
-  serializedVersion: 10
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 6
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 4
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 25, y: 0, z: 25}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200020001000300
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 4
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 128
-    _typelessdata: 0000c8c1000000000000c8c1000000000000803f0000000000000000000000000000c8c1000000000000c841000000000000803f00000000000000000000803f0000c841000000000000c8c1000000000000803f000000000000803f000000000000c841000000000000c841000000000000803f000000000000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 25, y: 0, z: 25}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    serializedVersion: 2
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &982740057
 GameObject:
   m_ObjectHideFlags: 0
@@ -60294,8 +60070,6 @@ GameObject:
   - component: {fileID: 1034530866}
   - component: {fileID: 1034530871}
   - component: {fileID: 1034530870}
-  - component: {fileID: 1034530869}
-  - component: {fileID: 1034530867}
   - component: {fileID: 1034530868}
   m_Layer: 0
   m_Name: TagNum (1)
@@ -60324,38 +60098,6 @@ RectTransform:
   m_AnchoredPosition: {x: 7.57, y: 4.88}
   m_SizeDelta: {x: 138.0217, y: 138.0217}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1034530867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034530865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885689023277ea9489c5515d25b837ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aumentoTxt: {fileID: 1675767760}
-  descripcionTxt: {fileID: 0}
-  videoPlayer: {fileID: 0}
-  videosArray:
-  - {fileID: 32900000, guid: 9ec6d440f56648a479e89c20f54e12d7, type: 3}
-  - {fileID: 32900000, guid: 9b676801a52c21f4196a839f7d1bf98d, type: 3}
-  - {fileID: 32900000, guid: 209490ad036dbe04cb30b09dc8f3ed7e, type: 3}
-  - {fileID: 32900000, guid: 7e18a1a735b7e91419dabc502a870db1, type: 3}
-  descripcionArray:
-  - "El agua tambi\xE9n es importante para el desarrollo larvario de algunas especies
-    como la lib\xE9lula."
-  - "Cuando el agua se queda estancada por mucho tiempo, se acumulan hongos microsc\xF3picos
-    que en conjunto con las algas se genera lo que llamamos \u201Clama\u201D, o tambi\xE9n
-    conocido como musgo microsc\xF3pico."
-  - "Las diatomeas son organismos unicelulares que ocupan algunas propiedades qu\xEDmicas
-    del agua para realizar procesos como reproducci\xF3n y alimentaci\xF3n."
-  - En el agua potable encontramos bacterias que, sin saberlo, las ingerimos generando
-    enfermedades  gastrointestinales.
-  aumentoBtn: {fileID: 0}
-  disminuirBtn: {fileID: 0}
 --- !u!114 &1034530868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60402,32 +60144,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
---- !u!114 &1034530869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034530865}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!114 &1034530870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60457,7 +60173,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.08
+  m_PixelsPerUnitMultiplier: 1.1
 --- !u!222 &1034530871
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61342,6 +61058,170 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1078046520}
   m_Mesh: {fileID: -731692476876672820, guid: 412a440f328a64946a7eae0e056adbde, type: 3}
+--- !u!43 &1084425680
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ImageTargetMesh130144
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 25, y: 0, z: 25}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200020001000300
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 128
+    _typelessdata: 0000c8c1000000000000c8c1000000000000803f0000000000000000000000000000c8c1000000000000c841000000000000803f00000000000000000000803f0000c841000000000000c8c1000000000000803f000000000000803f000000000000c841000000000000c841000000000000803f000000000000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 25, y: 0, z: 25}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1091276322
 GameObject:
   m_ObjectHideFlags: 0
@@ -62483,35 +62363,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 405965b3327928d4693471efe8097c07, type: 3}
---- !u!21 &1155080453
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'target_mcmMaterial
-
-    22122'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b26fbe992a0b51145b2137233e3a8583, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1157279243
 GameObject:
   m_ObjectHideFlags: 0
@@ -65099,8 +64950,6 @@ GameObject:
   - component: {fileID: 1309172706}
   - component: {fileID: 1309172711}
   - component: {fileID: 1309172710}
-  - component: {fileID: 1309172709}
-  - component: {fileID: 1309172707}
   - component: {fileID: 1309172708}
   m_Layer: 0
   m_Name: TagNum (3)
@@ -65129,38 +64978,6 @@ RectTransform:
   m_AnchoredPosition: {x: -13.42, y: 4.53}
   m_SizeDelta: {x: 138.0217, y: 138.0217}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1309172707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309172705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885689023277ea9489c5515d25b837ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aumentoTxt: {fileID: 801561999}
-  descripcionTxt: {fileID: 0}
-  videoPlayer: {fileID: 0}
-  videosArray:
-  - {fileID: 32900000, guid: 9ec6d440f56648a479e89c20f54e12d7, type: 3}
-  - {fileID: 32900000, guid: 9b676801a52c21f4196a839f7d1bf98d, type: 3}
-  - {fileID: 32900000, guid: 209490ad036dbe04cb30b09dc8f3ed7e, type: 3}
-  - {fileID: 32900000, guid: 7e18a1a735b7e91419dabc502a870db1, type: 3}
-  descripcionArray:
-  - "El agua tambi\xE9n es importante para el desarrollo larvario de algunas especies
-    como la lib\xE9lula."
-  - "Cuando el agua se queda estancada por mucho tiempo, se acumulan hongos microsc\xF3picos
-    que en conjunto con las algas se genera lo que llamamos \u201Clama\u201D, o tambi\xE9n
-    conocido como musgo microsc\xF3pico."
-  - "Las diatomeas son organismos unicelulares que ocupan algunas propiedades qu\xEDmicas
-    del agua para realizar procesos como reproducci\xF3n y alimentaci\xF3n."
-  - En el agua potable encontramos bacterias que, sin saberlo, las ingerimos generando
-    enfermedades  gastrointestinales.
-  aumentoBtn: {fileID: 0}
-  disminuirBtn: {fileID: 0}
 --- !u!114 &1309172708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65207,32 +65024,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
---- !u!114 &1309172709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309172705}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!114 &1309172710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65262,7 +65053,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.08
+  m_PixelsPerUnitMultiplier: 1.1
 --- !u!222 &1309172711
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -65282,8 +65073,6 @@ GameObject:
   - component: {fileID: 1314969000}
   - component: {fileID: 1314969005}
   - component: {fileID: 1314969004}
-  - component: {fileID: 1314969003}
-  - component: {fileID: 1314969001}
   - component: {fileID: 1314969002}
   m_Layer: 0
   m_Name: TagNum (5)
@@ -65312,38 +65101,6 @@ RectTransform:
   m_AnchoredPosition: {x: -19.57, y: 0.39}
   m_SizeDelta: {x: 138.0217, y: 138.0217}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1314969001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314968999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885689023277ea9489c5515d25b837ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aumentoTxt: {fileID: 342085167}
-  descripcionTxt: {fileID: 0}
-  videoPlayer: {fileID: 0}
-  videosArray:
-  - {fileID: 32900000, guid: 9ec6d440f56648a479e89c20f54e12d7, type: 3}
-  - {fileID: 32900000, guid: 9b676801a52c21f4196a839f7d1bf98d, type: 3}
-  - {fileID: 32900000, guid: 209490ad036dbe04cb30b09dc8f3ed7e, type: 3}
-  - {fileID: 32900000, guid: 7e18a1a735b7e91419dabc502a870db1, type: 3}
-  descripcionArray:
-  - "El agua tambi\xE9n es importante para el desarrollo larvario de algunas especies
-    como la lib\xE9lula."
-  - "Cuando el agua se queda estancada por mucho tiempo, se acumulan hongos microsc\xF3picos
-    que en conjunto con las algas se genera lo que llamamos \u201Clama\u201D, o tambi\xE9n
-    conocido como musgo microsc\xF3pico."
-  - "Las diatomeas son organismos unicelulares que ocupan algunas propiedades qu\xEDmicas
-    del agua para realizar procesos como reproducci\xF3n y alimentaci\xF3n."
-  - En el agua potable encontramos bacterias que, sin saberlo, las ingerimos generando
-    enfermedades  gastrointestinales.
-  aumentoBtn: {fileID: 0}
-  disminuirBtn: {fileID: 0}
 --- !u!114 &1314969002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65390,32 +65147,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
---- !u!114 &1314969003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314968999}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!114 &1314969004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65445,7 +65176,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.08
+  m_PixelsPerUnitMultiplier: 1.1
 --- !u!222 &1314969005
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -79130,8 +78861,6 @@ GameObject:
   - component: {fileID: 1626084152}
   - component: {fileID: 1626084157}
   - component: {fileID: 1626084156}
-  - component: {fileID: 1626084155}
-  - component: {fileID: 1626084153}
   - component: {fileID: 1626084154}
   m_Layer: 0
   m_Name: TagNum (4)
@@ -79160,38 +78889,6 @@ RectTransform:
   m_AnchoredPosition: {x: -19.13, y: 2.46}
   m_SizeDelta: {x: 138.0217, y: 138.0217}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1626084153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626084151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885689023277ea9489c5515d25b837ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aumentoTxt: {fileID: 327625995}
-  descripcionTxt: {fileID: 0}
-  videoPlayer: {fileID: 0}
-  videosArray:
-  - {fileID: 32900000, guid: 9ec6d440f56648a479e89c20f54e12d7, type: 3}
-  - {fileID: 32900000, guid: 9b676801a52c21f4196a839f7d1bf98d, type: 3}
-  - {fileID: 32900000, guid: 209490ad036dbe04cb30b09dc8f3ed7e, type: 3}
-  - {fileID: 32900000, guid: 7e18a1a735b7e91419dabc502a870db1, type: 3}
-  descripcionArray:
-  - "El agua tambi\xE9n es importante para el desarrollo larvario de algunas especies
-    como la lib\xE9lula."
-  - "Cuando el agua se queda estancada por mucho tiempo, se acumulan hongos microsc\xF3picos
-    que en conjunto con las algas se genera lo que llamamos \u201Clama\u201D, o tambi\xE9n
-    conocido como musgo microsc\xF3pico."
-  - "Las diatomeas son organismos unicelulares que ocupan algunas propiedades qu\xEDmicas
-    del agua para realizar procesos como reproducci\xF3n y alimentaci\xF3n."
-  - En el agua potable encontramos bacterias que, sin saberlo, las ingerimos generando
-    enfermedades  gastrointestinales.
-  aumentoBtn: {fileID: 0}
-  disminuirBtn: {fileID: 0}
 --- !u!114 &1626084154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79238,32 +78935,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
---- !u!114 &1626084155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1626084151}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!114 &1626084156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79293,7 +78964,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.08
+  m_PixelsPerUnitMultiplier: 1.1
 --- !u!222 &1626084157
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -80508,8 +80179,6 @@ GameObject:
   - component: {fileID: 1715211666}
   - component: {fileID: 1715211671}
   - component: {fileID: 1715211670}
-  - component: {fileID: 1715211669}
-  - component: {fileID: 1715211667}
   - component: {fileID: 1715211668}
   m_Layer: 0
   m_Name: TagNum (2)
@@ -80538,38 +80207,6 @@ RectTransform:
   m_AnchoredPosition: {x: -4.44, y: 4.88}
   m_SizeDelta: {x: 138.0217, y: 138.0217}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1715211667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715211665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885689023277ea9489c5515d25b837ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aumentoTxt: {fileID: 1214093797}
-  descripcionTxt: {fileID: 0}
-  videoPlayer: {fileID: 0}
-  videosArray:
-  - {fileID: 32900000, guid: 9ec6d440f56648a479e89c20f54e12d7, type: 3}
-  - {fileID: 32900000, guid: 9b676801a52c21f4196a839f7d1bf98d, type: 3}
-  - {fileID: 32900000, guid: 209490ad036dbe04cb30b09dc8f3ed7e, type: 3}
-  - {fileID: 32900000, guid: 7e18a1a735b7e91419dabc502a870db1, type: 3}
-  descripcionArray:
-  - "El agua tambi\xE9n es importante para el desarrollo larvario de algunas especies
-    como la lib\xE9lula."
-  - "Cuando el agua se queda estancada por mucho tiempo, se acumulan hongos microsc\xF3picos
-    que en conjunto con las algas se genera lo que llamamos \u201Clama\u201D, o tambi\xE9n
-    conocido como musgo microsc\xF3pico."
-  - "Las diatomeas son organismos unicelulares que ocupan algunas propiedades qu\xEDmicas
-    del agua para realizar procesos como reproducci\xF3n y alimentaci\xF3n."
-  - En el agua potable encontramos bacterias que, sin saberlo, las ingerimos generando
-    enfermedades  gastrointestinales.
-  aumentoBtn: {fileID: 0}
-  disminuirBtn: {fileID: 0}
 --- !u!114 &1715211668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80616,32 +80253,6 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
---- !u!114 &1715211669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715211665}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!114 &1715211670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80671,7 +80282,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2.08
+  m_PixelsPerUnitMultiplier: 1.1
 --- !u!222 &1715211671
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -97758,6 +97369,35 @@ Transform:
   m_Father: {fileID: 727765024}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1871785649
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'target_mcmMaterial
+
+    130156'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b26fbe992a0b51145b2137233e3a8583, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &1885127003
 GameObject:
   m_ObjectHideFlags: 0
