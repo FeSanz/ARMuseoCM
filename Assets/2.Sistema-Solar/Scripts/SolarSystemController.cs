@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,9 @@ public class SolarSystemController : MonoBehaviour
     
     [SerializeField, Tooltip("Titulo, Descripcion, Días, Años, Temperatura, Medidas")]
     private TextMeshProUGUI[] textData;
+    
+    [SerializeField, Tooltip("Switch para activar o desactivar paneles informativos")]
+    private GameObject switchInfo;
 
     /// <summary>
     /// Se activa al seleccionar un planeta para mostrar la descripción del mismo
@@ -24,6 +28,7 @@ public class SolarSystemController : MonoBehaviour
     /// <param name="idPlanetSelected">ID del planeta seleccionado</param>
     public void ActivePlanets(int idPlanetSelected) 
     {
+        switchInfo.SetActive(true);
         if (notificacion.activeInHierarchy)
         {
             notificacion.GetComponent<Animator>().Play("Out");
@@ -151,6 +156,7 @@ public class SolarSystemController : MonoBehaviour
     /// </summary>
     public void ShowSolarSystem()
     {
+        switchInfo.SetActive(false);
         HideAllPlanets();
         animatorSolarSystem.gameObject.SetActive(true);
     }
