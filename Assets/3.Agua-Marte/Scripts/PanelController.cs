@@ -22,7 +22,7 @@ public class PanelController : MonoBehaviour
     [SerializeField, Tooltip("Lista de planetas")]
     public GameObject[] planetas;
 
-    private static int actual = 0;
+    private int actual = 0;
 
     [SerializeField, Tooltip("Notificacion para aumentar volumen tipo SnackBar")]
     private GameObject SnackBar;
@@ -39,12 +39,6 @@ public class PanelController : MonoBehaviour
         }
     }
 
-    /*
-    private void Start()
-    {
-        PlayAudio();
-    }
-    */
     /// <summary>
     ///     Funcion que pone la descripcion de los planetas en el panel
     /// </summary>
@@ -69,13 +63,11 @@ public class PanelController : MonoBehaviour
     public void PauseAudio()
     {
         planetas[actual].GetComponent<AudioSource>().Pause();
-        Debug.Log("actual pause" + actual);
     }
 
     public void PlayAudio()
     {
         planetas[actual].GetComponent<AudioSource>().Play();
-        Debug.Log("actual play" + actual);
     }
     
     public void MuteAudioAll()
