@@ -7,7 +7,7 @@ public class ArrowControl : MonoBehaviour
     [SerializeField] GameObject nextArrow;
     public float tiempo_espera = 15;
     // Start is called before the first frame update
-    void Awake()
+    public void PlayAudio()
     {
         StartCoroutine(ControlArrows());
     }
