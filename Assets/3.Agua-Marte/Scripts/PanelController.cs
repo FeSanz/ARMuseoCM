@@ -21,8 +21,30 @@ public class PanelController : MonoBehaviour
     public string[] radios;
     [SerializeField, Tooltip("Lista de planetas")]
     public GameObject[] planetas;
-    private int actual = 0;
 
+    private static int actual = 0;
+
+    [SerializeField, Tooltip("Notificacion para aumentar volumen tipo SnackBar")]
+    private GameObject SnackBar;
+
+    void Update()
+    {
+        if (AudioSettings.Mobile.muteState)
+        {
+            SnackBar.SetActive(true);
+        }
+        else
+        {
+            SnackBar.SetActive(false);
+        }
+    }
+
+    /*
+    private void Start()
+    {
+        PlayAudio();
+    }
+    */
     /// <summary>
     ///     Funcion que pone la descripcion de los planetas en el panel
     /// </summary>
@@ -40,6 +62,35 @@ public class PanelController : MonoBehaviour
             }
             planetas[posicion].SetActive(true);
             actual = posicion;
+            PlayAudio();
+        }
+    }
+
+    public void PauseAudio()
+    {
+        planetas[actual].GetComponent<AudioSource>().Pause();
+        Debug.Log("actual pause" + actual);
+    }
+
+    public void PlayAudio()
+    {
+        planetas[actual].GetComponent<AudioSource>().Play();
+        Debug.Log("actual play" + actual);
+    }
+    
+    public void MuteAudioAll()
+    {
+        foreach (GameObject audio in planetas)
+        {
+            audio.GetComponent<AudioSource>().mute = true;
+        }
+    }
+
+    public void UnMuteAudioAll()
+    {
+        foreach (GameObject audio in planetas)
+        {
+            audio.GetComponent<AudioSource>().mute = false;
         }
     }
 }
