@@ -19,6 +19,7 @@ public class PlayAudio : MonoBehaviour
         audioS.Play();
     }
 
+
     public void PlayWaves()
     {
         Waves.Play();
@@ -28,10 +29,6 @@ public class PlayAudio : MonoBehaviour
         Waves.Stop();
     }
 
-    public void HideWaves()
-    {
-        
-    }
 
 
 }
