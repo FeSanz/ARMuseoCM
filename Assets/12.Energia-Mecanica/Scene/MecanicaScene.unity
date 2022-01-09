@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45077395, g: 0.49894089, b: 0.56528306, a: 1}
+  m_IndirectSpecularColor: {r: 0.4507748, g: 0.49894172, b: 0.56528383, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -347,7 +347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25486127}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -1.5, y: 14.200015, z: -3.100008}
+  m_LocalPosition: {x: -1.5, y: 14.2, z: -5.5}
   m_LocalScale: {x: 1.4400011, y: 1.4399999, z: 1.4400021}
   m_Children:
   - {fileID: 5264878722620121169}
@@ -713,7 +713,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120257819}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -2.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 551089691}
@@ -4201,7 +4201,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025582006}
   m_CullTransparentMesh: 0
---- !u!21 &1033355388
+--- !u!21 &1125182308
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -4210,7 +4210,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: 'target_mcmMaterial
 
-    21924'
+    64268'
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -5575,7 +5575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540673087}
   m_LocalRotation: {x: 0.81673723, y: -0.17475875, z: 0.026174027, w: 0.54928553}
-  m_LocalPosition: {x: 4.38, y: 26.590027, z: 11.590008}
+  m_LocalPosition: {x: 4.38, y: 26.6, z: 9.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1756118460}
@@ -6299,7 +6299,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1033355388}
+  - {fileID: 1125182308}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
