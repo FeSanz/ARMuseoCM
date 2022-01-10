@@ -16955,7 +16955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StageNext: {fileID: 710958795}
-  Wait: 14
+  Wait: 13
 --- !u!82 &1198741352
 AudioSource:
   m_ObjectHideFlags: 0
