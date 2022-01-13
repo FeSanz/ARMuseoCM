@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/AboutScene.unity
+    guid: b8e60e6a66f15694e9f8c59d4636c16e
+  - enabled: 1
     path: Assets/1.Microscopio/Scenes/MicroscopioScene.unity
     guid: 5c0dacf46b47f3144b7ad55fd2a94bfb
   - enabled: 1
