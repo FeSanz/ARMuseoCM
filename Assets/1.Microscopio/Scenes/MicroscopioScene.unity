@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4393548, g: 0.48767668, b: 0.56791586, a: 1}
+  m_IndirectSpecularColor: {r: 0.4507748, g: 0.49894172, b: 0.56528383, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 33943429}
   - component: {fileID: 33943428}
   - component: {fileID: 33943427}
+  - component: {fileID: 33943433}
   m_Layer: 5
   m_Name: SwitchAudio
   m_TagString: Untagged
@@ -401,9 +402,9 @@ MonoBehaviour:
   OnEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 431707420}
-        m_TargetAssemblyTypeName: MicroscopioController, Assembly-CSharp
-        m_MethodName: UnMuteAudioAll
+      - m_Target: {fileID: 33943433}
+        m_TargetAssemblyTypeName: SoundValidate, Assembly-CSharp
+        m_MethodName: SpeakAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -416,9 +417,9 @@ MonoBehaviour:
   OffEvents:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 431707420}
-        m_TargetAssemblyTypeName: MicroscopioController, Assembly-CSharp
-        m_MethodName: MuteAudioAll
+      - m_Target: {fileID: 33943433}
+        m_TargetAssemblyTypeName: SoundValidate, Assembly-CSharp
+        m_MethodName: MuteAudio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -448,6 +449,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33943425}
   m_CullTransparentMesh: 0
+--- !u!114 &33943433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33943425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a21f2669a02c7e4cbd315487bd114cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnackBar: {fileID: 1752637224}
+  AudioStage:
+  - {fileID: 1219356162}
+  - {fileID: 1190047152}
+  - {fileID: 478366915}
+  - {fileID: 1478573350}
 --- !u!1 &50690323
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +639,7 @@ RectTransform:
   - {fileID: 2138349090}
   - {fileID: 1085589910}
   m_Father: {fileID: 1287203175}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1616,7 +1635,6 @@ MonoBehaviour:
   - {fileID: 1478573348}
   aumentoBtn: {fileID: 1898542996}
   disminuirBtn: {fileID: 2026429706}
-  SnackBar: {fileID: 1752637224}
 --- !u!114 &431707421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2535,6 +2553,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666439787}
   m_CullTransparentMesh: 0
+--- !u!21 &708559894
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'target_mcmMaterial
+
+    194668'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: b26fbe992a0b51145b2137233e3a8583, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!43 &797848830
 Mesh:
   m_ObjectHideFlags: 0
@@ -3070,7 +3117,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1974708501}
+  - {fileID: 708559894}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4224,13 +4271,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1534581099}
+  - {fileID: 1752637227}
   - {fileID: 1537431281}
   - {fileID: 308181347}
   - {fileID: 1519456528}
   - {fileID: 1093228777}
+  - {fileID: 1534581099}
   - {fileID: 99542438}
-  - {fileID: 1752637227}
   - {fileID: 33943426}
   m_Father: {fileID: 818790740}
   m_RootOrder: 1
@@ -5104,7 +5151,7 @@ RectTransform:
   - {fileID: 496964784}
   - {fileID: 1393144750}
   m_Father: {fileID: 1287203175}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -6145,7 +6192,7 @@ RectTransform:
   m_Children:
   - {fileID: 1668316174}
   m_Father: {fileID: 1287203175}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -6991,35 +7038,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940258213}
   m_CullTransparentMesh: 0
---- !u!21 &1974708501
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'target_mcmMaterial
-
-    214734'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b26fbe992a0b51145b2137233e3a8583, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &2026429705
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,6 +21,9 @@ public class SolarSystemController : MonoBehaviour
     
     [SerializeField, Tooltip("Switch para activar o desactivar paneles informativos")]
     private GameObject switchInfo;
+    
+    [SerializeField, Tooltip("Switch para activar o desactivar audios")]
+    private GameObject switchAudio;
 
     /// <summary>
     /// Se activa al seleccionar un planeta para mostrar la descripción del mismo
@@ -29,6 +32,7 @@ public class SolarSystemController : MonoBehaviour
     public void ActivePlanets(int idPlanetSelected) 
     {
         switchInfo.SetActive(true);
+        switchAudio.SetActive(true);
         if (notificacion.activeInHierarchy)
         {
             notificacion.GetComponent<Animator>().Play("Out");
@@ -157,6 +161,7 @@ public class SolarSystemController : MonoBehaviour
     public void ShowSolarSystem()
     {
         switchInfo.SetActive(false);
+        switchAudio.SetActive(false);
         HideAllPlanets();
         animatorSolarSystem.gameObject.SetActive(true);
     }

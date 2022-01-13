@@ -18,28 +18,15 @@ public class MicroscopioController : MonoBehaviour
     private int numAumento = 1;
     [SerializeField, Tooltip("Boton para el aumento de zoom")]
     public Button aumentoBtn;
-    [SerializeField, Tooltip("Boton para el disminución de zoom")] 
+    [SerializeField, Tooltip("Boton para el disminuciÃ³n de zoom")] 
     public Button disminuirBtn;
-    [SerializeField, Tooltip("Notificacion para aumentar volumen tipo SnackBar")]
-    private GameObject SnackBar;
 
     void Start()
     {
         aumentoTxt.SetText("X1");
         descripcionTxt.SetText(descripcionArray[numAumento-1]);
         disminuirBtn.interactable = false;
-    }
-
-    void Update()
-    {
-        if (AudioSettings.Mobile.muteState)
-        {
-            SnackBar.SetActive(true);
-        }
-        else
-        {
-            SnackBar.SetActive(false);
-        }
+        disminuirBtn.gameObject.SetActive(false);
     }
 
     /// <summary>
@@ -57,10 +44,12 @@ public class MicroscopioController : MonoBehaviour
             audios[numAumento - 1].SetActive(true);
             PlayAudio();
             disminuirBtn.interactable = true;
+            disminuirBtn.gameObject.SetActive(true);
         }
         if(numAumento == videosArray.Length)
         {
             aumentoBtn.interactable = false;
+            aumentoBtn.gameObject.SetActive(false);
         }
     }
 
@@ -79,10 +68,12 @@ public class MicroscopioController : MonoBehaviour
             audios[numAumento - 1].SetActive(true);
             PlayAudio();
             aumentoBtn.interactable = true;
+            aumentoBtn.gameObject.SetActive(true);
         }
         if (numAumento == 1)
         {
             disminuirBtn.interactable = false;
+            disminuirBtn.gameObject.SetActive(false);
         }
     }
 
@@ -102,21 +93,5 @@ public class MicroscopioController : MonoBehaviour
     public void PlayAudio()
     {
         audios[numAumento-1].GetComponent<AudioSource>().Play();
-    }
-    
-    public void MuteAudioAll()
-    {
-        foreach (GameObject audio in audios)
-        {
-            audio.GetComponent<AudioSource>().mute = true;
-        }
-    }
-
-    public void UnMuteAudioAll()
-    {
-        foreach (GameObject audio in audios)
-        {
-            audio.GetComponent<AudioSource>().mute = false;
-        }
     }
 }

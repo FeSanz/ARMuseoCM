@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class SoundValidate : MonoBehaviour
@@ -37,6 +38,11 @@ public class SoundValidate : MonoBehaviour
         {
             audio.mute = false;
         }
+    }
+    
+    public void ReloadScene(string nameScene)
+    {
+        SceneManager.LoadScene(nameScene);
     }
    
 }
