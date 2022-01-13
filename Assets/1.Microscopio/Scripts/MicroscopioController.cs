@@ -18,14 +18,28 @@ public class MicroscopioController : MonoBehaviour
     private int numAumento = 1;
     [SerializeField, Tooltip("Boton para el aumento de zoom")]
     public Button aumentoBtn;
-    [SerializeField, Tooltip("Boton para el diminicion de zoom")] 
+    [SerializeField, Tooltip("Boton para el disminución de zoom")] 
     public Button disminuirBtn;
+    [SerializeField, Tooltip("Notificacion para aumentar volumen tipo SnackBar")]
+    private GameObject SnackBar;
 
     void Start()
     {
         aumentoTxt.SetText("X1");
         descripcionTxt.SetText(descripcionArray[numAumento-1]);
         disminuirBtn.interactable = false;
+    }
+
+    void Update()
+    {
+        if (AudioSettings.Mobile.muteState)
+        {
+            SnackBar.SetActive(true);
+        }
+        else
+        {
+            SnackBar.SetActive(false);
+        }
     }
 
     /// <summary>
