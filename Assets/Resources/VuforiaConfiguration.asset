@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AaBmcvD/////AAABmRfXC7VNJkhIsstqaAFGRlcZlmcXVteSWukEs4Iy1vyH5w48rl8cErn865+2mMBqqB2rP9A26vsYGkSq0KjvhMxhM6BvYec5cScIhPih0uj9nhRlLM6GpNGUvT+9PL6MIH1jY4ifEO+Yboe8OxpzwgjVD02Six8/m/5wNdQ9sdx/6wEFp8uQKFKIy1azyLAKcLZjJ+seh0BqFrazcOy8e+OS8lN/yPoSXK+OvxU1vEvUska7loMLzL6pqLzUl15LeXKWoXwgcYp6+jAyCwbdU01hdorNLWlisXlVZbOZy+ZBRQxBSpqcWFI7z4qQHM1kiSGgYvSq2kLlFP+FBm6CtPsOWPF3hvfrQIrWLoe7kXWV
+    vuforiaLicenseKey: Ac8ksAz/////AAABmX4BFShBUU6DrIIjrDnSlipMXiwam38GmR2QT6DIW5NBcTMBPNnjSzu6GRx/CegoasL14SIr8uhSQT7UDYpPkzmjzMSFvq8pblSZYjvUpgS7wDa8XpN/qWATWujbMNTNiSdfOszxJ2FKTs2jZGyTqIbfNbko8Oaaxsby3NPZupYyU079kLzn79DSOVWScvE9Zik8Rwh3JbkSXy3CZanTV10004Yq/lirpFDhGj/AoQZV4OgOo3aDLuHDDhIanlOreRr//ubC9oQyWPD99/M2pyvVP9TnmIUNxWX+m4ZvmXKZiA24uiuxn/c0QOz4zAxS+/JciOtUBmfRrjHtQdG3V59GEBxmw0waaDVVWJGsL+VI
     ufoLicenseKey: QVhiM0Y1Ly8vLy8vQUFBQUtPbnFIeHJFSGs1N3VrMlg4U050eVBzK2pkOFZxMDhrazlwYjBsYS9aZUIxQlV1ckZWcWt0ZllSQWpnT2tIRlY2VzdOMDRTRjNYRUhmbTF5L1BnYlB4eWdHWEF6RUNheXowc3dyNVNYa2ozdERuRjhka1FpOHRscHdkMDcrcEJEY1FjTjNJcUM1bEgwOTYzQkdZdjRsQStRb0hSQU9nRGthelp5TlY0WHVwWU9EaE05NWw5bXAzbnBDMjM5MWZBWXBFdEdiL2loTDNab3N4b25ZblhjK1JtSS9wLzRoTDIwVGhmTXR6WFJNYkpUTXZLZzJoQ0N0TEJXNEptZ0pSOUtSdStzQWM3QjVNOWFFMGVHQ1dUT1VRSUUweEpiZC9ZL2cvS29iNDhBRXdQOGFwbWR5NmRWU0FHU2psVzRZY2FEU2Zud3J1ZHhucVNmSUZiajNTUnIzM0lKVlFIaW1rL0oyOGNFeDdyekcySXg=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
@@ -23,8 +23,8 @@ MonoBehaviour:
     useDelayedLoadingObjectTargets: 0
     modelTargetRecoWhileExtendedTracked: 1
     shareRecordingsInITunes: 1
-    version: 10.1.4
-    eulaAcceptedVersions: '{"Values":["8.1","8.5","9.0","8.6","9.1","9.2","0.0","9.4","9.3","9.5","9.8","9.6","10.1","10.2"]}'
+    version: 10.4.4
+    eulaAcceptedVersions: '{"Values":["8.1","8.5","9.0","8.6","9.1","9.2","0.0","9.4","9.3","9.5","9.8","9.6","10.1","10.2","10.4"]}'
   database:
     disableModelExtraction: 0
   shaders:
@@ -37,7 +37,8 @@ MonoBehaviour:
   deviceTracker:
     autoStartTracker: 1
     arcoreRequirement: 1
-    autoImportArcore: 1
+    autoImportArcore: 0
+    thirdPartyARCoreClientDetected: 0
   playmode:
     mSequencePath: Recording/VuforiaSession-20210518-120955
     playModeType: 0
